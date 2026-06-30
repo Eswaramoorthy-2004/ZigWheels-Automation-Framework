@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test name="TC_01">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/2497720/IdeaProjects/ZigWheels-Automation-Framework/src/test/java/testcases/TC_01_InvalidEmail.java">
         <classes>
-            <class name="testcases.TC_01_InvalidEmail"></class>
+            <class name="testcases.TC_01_InvalidEmail">
+            </class>
+            <class name="testcases.TC_01_LaunchApp">
+            </class>
         </classes>
     </test>
 </suite>
