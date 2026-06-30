@@ -4,9 +4,9 @@
     <test verbose="2" preserve-order="true"
           name="C:/Users/2497720/IdeaProjects/ZigWheels-Automation-Framework/src/test/java/testcases/TC_01_InvalidEmail.java">
         <classes>
-            <class name="testcases.TC_01_InvalidEmail">
-            </class>
             <class name="testcases.TC_01_LaunchApp">
+            </class>
+            <class name="testcases.TC_01_InvalidEmail">
             </class>
         </classes>
     </test>
