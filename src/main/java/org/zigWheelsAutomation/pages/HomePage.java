@@ -2,6 +2,7 @@ package org.zigWheelsAutomation.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -13,7 +14,16 @@ public class HomePage {
     }
 
     @FindBy(xpath = "//span[text()='NEW BIKES']")
-    WebElement newBikes;
+    WebElement newBikesElement;
 
+    @FindBy(xpath = "//a[contains(@title,'Upcoming Bikes')]")
+    WebElement upcomingBikesElement;
 
+    public void hoverNewBikes(){
+        Actions action = new Actions(driver);
+        action.moveToElement(newBikesElement).perform();
+    }
+    public void clickUpcomingCars(){
+        upcomingBikesElement.click();
+    }
 }
