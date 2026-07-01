@@ -4,42 +4,36 @@ import basetest.BaseTest;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-import org.testng.Assert;
+import org.zigWheelsAutomation.pages.PopularModelsPage;
 import org.zigWheelsAutomation.pages.UsedCarsPage;
 
 import java.time.Duration;
 
-import static org.testng.AssertJUnit.assertTrue;
 
-/*
-
-public class TC_15_ValidatePopularCarModels extends BaseTest {
+public class TC_13_ExtractPopularCarModels extends BaseTest {
 
     @Test
-    public void validatePopularCarModels() {
+    public void extractPopularCarModels() {
 
         UsedCarsPage page = new UsedCarsPage(driver);
 
         page.clickMore();
         page.clickUsedCars();
-        page.selectCity("Chennai");
+        PopularModelsPage page1 = new PopularModelsPage(driver);
+        page1.selectCity("Chennai");
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(driver -> page.getModelCount() > 0);
+        wait.until(driver -> page1.getModelCount() > 0);
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");
 
-        wait.until(driver -> page.getModelCount() > 0);
+        //wait.until(driver -> page.getModelCount() > 0);
 
-        int modelCount = page.getModelCount();
+        page1.printModels();
 
-        assertTrue(modelCount > 0);
-
-        page.printModels();
-
-        System.out.println("Total models Available : " + modelCount);
+        System.out.println("Popular car models extracted successfully");
     }
 }
 
- */
+
