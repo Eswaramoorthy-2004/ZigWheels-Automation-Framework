@@ -3,7 +3,8 @@
 <suite name="All Test Suite">
     <test name="TC_01">
         <classes>
-            <class name="testcases.TC_01_InvalidEmail"></class>
+            <class name="testcases.TC_16_ValidateGoogleLogin"></class>
+            <class name="testcases.TC_17_InvalidEmail"></class>
         </classes>
     </test>
 </suite>
