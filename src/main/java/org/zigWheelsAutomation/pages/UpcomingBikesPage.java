@@ -8,9 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UpcomingBikesPage {
-
-    private WebDriver driver;
+public class UpcomingBikesPage extends  UpcomingHondaBikesPage{
 
     // ---------- WebElements ----------
     @FindBy(xpath = "//a[contains(@data-track-label,'model')]")
@@ -19,15 +17,11 @@ public class UpcomingBikesPage {
     @FindBy(xpath = "//div[contains(@class,'b fnt')]")
     private List<WebElement> bikePriceElements;
 
-    // ---------- Constructor ----------
     public UpcomingBikesPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
-    // ---------- Action Methods ----------
-
-    /** Extracts non-empty bike names from the upcoming bikes listing. */
     public List<String> getBikeNames() {
         List<String> names = new ArrayList<>();
         for (WebElement ele : bikeNameElements) {
@@ -39,7 +33,6 @@ public class UpcomingBikesPage {
         return names;
     }
 
-    /** Extracts only valid 'Rs. X Lakh' style prices, skipping blanks & junk. */
     public List<String> getBikePrices() {
         List<String> prices = new ArrayList<>();
         for (WebElement ele : bikePriceElements) {
