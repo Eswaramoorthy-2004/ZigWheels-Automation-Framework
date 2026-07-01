@@ -1,12 +1,13 @@
 package testcases;
 
 import basetest.BaseTest;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.zigWheelsAutomation.pages.LoginPage;
 
 import java.util.Set;
 
-public class TC_01_InvalidEmail extends BaseTest {
+public class TC_17_InvalidEmail extends BaseTest {
     LoginPage glp;
 
     @Test
@@ -24,7 +25,10 @@ public class TC_01_InvalidEmail extends BaseTest {
         if (driver.getWindowHandle() != oldWindow) {
             glp.setInvalidEmail("bob@.com");
             glp.clickNext();
+            //System.out.println(glp.getErrorMessage());
+            Assert.assertEquals(glp.getErrorMessage(),"Enter a valid email or phone number");
         }
+
     }
 
 }
