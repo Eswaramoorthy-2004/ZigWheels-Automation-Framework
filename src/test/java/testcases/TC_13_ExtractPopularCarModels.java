@@ -6,21 +6,24 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.zigWheelsAutomation.pages.PopularModelsPage;
 import org.zigWheelsAutomation.pages.UsedCarsPage;
+import org.zigWheelsAutomation.utilities.PropertyReader;
 
+import java.io.IOException;
 import java.time.Duration;
 
 
 public class TC_13_ExtractPopularCarModels extends BaseTest {
 
     @Test
-    public void extractPopularCarModels() {
+    public void extractPopularCarModels() throws IOException {
 
         UsedCarsPage page = new UsedCarsPage(driver);
+        PropertyReader p =new PropertyReader();
 
         page.clickMore();
         page.clickUsedCars();
         PopularModelsPage page1 = new PopularModelsPage(driver);
-        page1.selectCity("Chennai");
+        page1.selectCity(p.getCity());
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(driver -> page1.getModelCount() > 0);

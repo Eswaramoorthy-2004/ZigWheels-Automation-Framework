@@ -40,5 +40,9 @@ public class PropertyReader {
         return prop.getProperty("invalidPhoneNumber");
     }
 
+    public String getCity(){
+        return prop.getProperty("city");
+    }
+
 
 }
