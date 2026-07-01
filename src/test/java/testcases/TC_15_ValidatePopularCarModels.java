@@ -2,11 +2,16 @@ package testcases;
 
 import basetest.BaseTest;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 import org.zigWheelsAutomation.pages.UsedCarsPage;
 
-public class TC_15_ValidatePopularCarModels extends BaseTest{
+import java.time.Duration;
+
+import static org.testng.AssertJUnit.assertTrue;
+
+public class TC_15_ValidatePopularCarModels extends BaseTest {
 
     @Test
     public void validatePopularCarModels() {
@@ -17,20 +22,20 @@ public class TC_15_ValidatePopularCarModels extends BaseTest{
         page.clickUsedCars();
         page.selectCity("Chennai");
 
-        try { Thread.sleep(2000);
-        } catch (Exception e) {}
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(driver -> page.getModelCount() > 0);
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");
 
-        try { Thread.sleep(2000);
-        } catch (Exception e) {}
+        wait.until(driver -> page.getModelCount() > 0);
 
         int modelCount = page.getModelCount();
 
-        Assert.assertTrue(modelCount > 0);
+        assertTrue(modelCount > 0);
 
         page.printModels();
 
         System.out.println("Total models Available : " + modelCount);
-}}
+    }
+}
