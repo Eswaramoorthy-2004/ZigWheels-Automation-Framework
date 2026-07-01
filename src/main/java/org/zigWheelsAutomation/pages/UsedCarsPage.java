@@ -48,7 +48,7 @@ public class UsedCarsPage {
         js.executeScript("arguments[0].click();", usedCarsOption);
 
     }
-
+    /*
     public void selectCity(String city) {
         cityInput.sendKeys(city);
         selectCity.click();
@@ -68,5 +68,6 @@ public class UsedCarsPage {
         if (popularModels.size() > 0) {
             popularModels.get(0).click();
         }
+
+     */
     }
-}
