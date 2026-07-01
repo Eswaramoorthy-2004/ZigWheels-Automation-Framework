@@ -33,11 +33,6 @@ public class UsedCarsPage {
 
     public void clickMore() {
         moreMenu.click();
-
-        try {
-            Thread.sleep(1000);
-        } catch (Exception e) {}
-
     }
 
     public void clickUsedCars() {
@@ -47,7 +42,8 @@ public class UsedCarsPage {
         js.executeScript("arguments[0].scrollIntoView({block:'center'});", usedCarsOption);
         js.executeScript("arguments[0].click();", usedCarsOption);
 
-    }
+    }}
+
     /*
     public void selectCity(String city) {
         cityInput.sendKeys(city);
@@ -70,4 +66,4 @@ public class UsedCarsPage {
         }
 
      */
-    }
+

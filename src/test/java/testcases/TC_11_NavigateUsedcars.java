@@ -15,6 +15,7 @@ public class TC_11_NavigateUsedcars extends BaseTest {
 
         String Currenrurl = driver.getCurrentUrl();
         String expectedUrl = "https://www.zigwheels.com/used-car";
+
         Assert.assertEquals(Currenrurl,expectedUrl,"The URL is Checked Successfully");
         System.out.println("Used Cars section opened successfully");
 }}

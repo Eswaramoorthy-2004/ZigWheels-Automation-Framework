@@ -28,8 +28,6 @@ public class TC_13_ExtractPopularCarModels extends BaseTest {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");
 
-        //wait.until(driver -> page.getModelCount() > 0);
-
         page1.printModels();
 
         System.out.println("Popular car models extracted successfully");

@@ -34,9 +34,14 @@ public class PopularModelsPage {
     }
 
     public void printModels() {
+
         for (WebElement model : popularModels) {
-            System.out.println(model.getText());
+            String name = model.getText().trim();
+            if (!name.isEmpty()) {
+                System.out.println(name);
+            }
         }
+
     }
     public String getSelectedCity() {
         return cityInput.getAttribute("value");
