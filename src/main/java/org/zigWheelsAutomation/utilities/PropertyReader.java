@@ -29,5 +29,16 @@ public class PropertyReader {
     public String getUpcomingHondaPageTitle(){
         return prop.getProperty("upcomingHondaPageTitle");
     }
+    public String getValidEmail(){
+        return prop.getProperty("validEmail");
+    }
+    public String getInValidEmail(){
+        return prop.getProperty("invalidEmail");
+    }
+
+    public String getValidPhoneNumber(){
+        return prop.getProperty("invalidPhoneNumber");
+    }
+
 
 }

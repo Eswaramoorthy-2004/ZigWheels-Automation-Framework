@@ -6,13 +6,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.zigWheelsAutomation.pages.LoginPage;
+import org.zigWheelsAutomation.utilities.PropertyReader;
+
+import java.io.IOException;
 import java.time.Duration;
 
 public class TC_18_InvalidPhoneNumber extends BaseTest{
     LoginPage glp;
+    PropertyReader property;
 
     @Test
-    public void invalidEmail() throws InterruptedException {
+    public void invalidEmail() throws InterruptedException, IOException {
+        property = new PropertyReader();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         glp = new LoginPage(driver);
         glp.goLogin();
@@ -20,7 +25,7 @@ public class TC_18_InvalidPhoneNumber extends BaseTest{
         glp.clickGoogle();
         wait.until(ExpectedConditions.numberOfWindowsToBe(2));
         glp.switchWindow();
-        glp.enterEmailOrPhone("123456@7890");
+        glp.enterEmailOrPhone(property.getValidPhoneNumber());
         glp.clickNext();
         Assert.assertEquals(glp.getErrorMessage(),"Enter a valid email or phone number");
         driver.switchTo().window(oldWindow);

@@ -67,20 +67,16 @@ public class LoginPage {
         }
     }
     public void switchWindow(){
-
         Set<String> windowsIds = driver.getWindowHandles();
-        System.out.println("no of windows :"+windowsIds.size());
         for(String w : windowsIds){
             if(!w.equals(oldWindowX)){
                 driver.switchTo().window(w);
-                System.out.println("Window Switched");
                 break;
             }
         }
     }
 
     public void enterEmailOrPhone(String email){
-        //String value = emailInput.getDomProperty("")
         emailInput.sendKeys(email);
     }
 
