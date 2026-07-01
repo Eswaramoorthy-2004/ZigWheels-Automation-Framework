@@ -8,8 +8,16 @@
             </class>
             <class name="testcases.TC_02_NavigateToUpcomingBikes">
             </class>
-            <class name="testcases.TC_16_ValidateGoogleLogin"></class>
-            <class name="testcases.TC_17_InvalidEmail"></class>
+            <class name="testcases.TC_16_ValidateLoginOptions">
+            </class>
+            <class name="testcases.TC_17_InvalidEmail">
+            </class>
+            <class name="testcases.TC_18_InvalidPhoneNumber">
+            </class>
+            <class name="testcases.TC_19_EmptyEmail">
+            </class>
+            <class name="testcases.TC_20_ValidEmail">
+            </class>
         </classes>
     </test>
 </suite>

@@ -1,13 +1,18 @@
 package org.zigWheelsAutomation.pages;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.swing.*;
 import java.time.Duration;
+import java.util.Set;
 
 import static java.time.Duration.*;
 
@@ -17,31 +22,65 @@ public class LoginPage {
         this.driver=driver;
         PageFactory.initElements(driver,this);
     }
+    public String oldWindowX;
+    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+
     @FindBy(id="des_lIcon")
     WebElement login;
 
     @FindBy(xpath="//span[text()='Google']")
     public WebElement google;
 
+    @FindBy(xpath = "//span[text()='Facebook']")
+    public WebElement facebook;
+
+    @FindBy(xpath = "//span[text()='Apple']")
+    public WebElement apple;
+
     @FindBy(xpath = "//span[text()='Next']")
     WebElement next;
 
     @FindBy(id="identifierId")
-    WebElement emailInput;
+    public WebElement emailInput;
 
     @FindBy(xpath = "//div[@id='i8']")
     WebElement errorMsg;
 
+    @FindBy(xpath = "//h1[@id='headingText']")
+    public WebElement pageTitle;
+
 
     public void goLogin(){
         login.click();
+        oldWindowX = driver.getWindowHandle();
+    }
+    public void clickGoogle() throws InterruptedException {
+        int retries = 3;
+        for (int i = 0; i < retries; i++) {
+            google.click();
+            try {
+                new WebDriverWait(driver, Duration.ofSeconds(3))
+                        .until(ExpectedConditions.numberOfWindowsToBe(2));
+                break;
+            } catch (TimeoutException e) {
+            }
+        }
+    }
+    public void switchWindow(){
+
+        Set<String> windowsIds = driver.getWindowHandles();
+        System.out.println("no of windows :"+windowsIds.size());
+        for(String w : windowsIds){
+            if(!w.equals(oldWindowX)){
+                driver.switchTo().window(w);
+                System.out.println("Window Switched");
+                break;
+            }
+        }
     }
 
-    public void clickGoogle(){
-        google.click();
-    }
-
-    public void setInvalidEmail(String email){
+    public void enterEmailOrPhone(String email){
+        //String value = emailInput.getDomProperty("")
         emailInput.sendKeys(email);
     }
 

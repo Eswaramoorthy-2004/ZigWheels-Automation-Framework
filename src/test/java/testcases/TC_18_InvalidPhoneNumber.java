@@ -8,8 +8,7 @@ import org.testng.annotations.Test;
 import org.zigWheelsAutomation.pages.LoginPage;
 import java.time.Duration;
 
-
-public class TC_17_InvalidEmail extends BaseTest {
+public class TC_18_InvalidPhoneNumber extends BaseTest{
     LoginPage glp;
 
     @Test
@@ -21,9 +20,10 @@ public class TC_17_InvalidEmail extends BaseTest {
         glp.clickGoogle();
         wait.until(ExpectedConditions.numberOfWindowsToBe(2));
         glp.switchWindow();
-        glp.enterEmailOrPhone(";;;;");
+        glp.enterEmailOrPhone("123456@7890");
         glp.clickNext();
         Assert.assertEquals(glp.getErrorMessage(),"Enter a valid email or phone number");
         driver.switchTo().window(oldWindow);
     }
+
 }
