@@ -12,9 +12,10 @@ import org.zigWheelsAutomation.utilities.PropertyReader;
 import java.io.IOException;
 import java.time.Duration;
 
-
-public class TC_17_InvalidEmail extends BaseTest {
+public class TC_20_ValidEmail extends BaseTest {
     LoginPage glp;
+    String emailPageTitle;
+    String oldWindow;
     PropertyReader property;
 
     @Test
@@ -23,13 +24,15 @@ public class TC_17_InvalidEmail extends BaseTest {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         glp = new LoginPage(driver);
         glp.goLogin();
-        String oldWindow = driver.getWindowHandle();
+        oldWindow = driver.getWindowHandle();
         glp.clickGoogle();
         wait.until(ExpectedConditions.numberOfWindowsToBe(2));
         glp.switchWindow();
-        glp.enterEmailOrPhone(property.getInValidEmail());
+        emailPageTitle=glp.pageTitle.getText();
+        glp.enterEmailOrPhone(property.getValidEmail());
         glp.clickNext();
-        Assert.assertEquals(glp.getErrorMessage(),"Enter a valid email or phone number");
+        wait.until(ExpectedConditions.not(ExpectedConditions.textToBePresentInElement(glp.pageTitle,emailPageTitle)));
+        Assert.assertNotEquals(emailPageTitle,glp.pageTitle.getText(),"Password field should be displayed after entering valid email");
         driver.switchTo().window(oldWindow);
     }
 }

@@ -1,7 +1,6 @@
 package testcases;
 
 import basetest.BaseTest;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -12,8 +11,7 @@ import org.zigWheelsAutomation.utilities.PropertyReader;
 import java.io.IOException;
 import java.time.Duration;
 
-
-public class TC_17_InvalidEmail extends BaseTest {
+public class TC_18_InvalidPhoneNumber extends BaseTest{
     LoginPage glp;
     PropertyReader property;
 
@@ -27,9 +25,10 @@ public class TC_17_InvalidEmail extends BaseTest {
         glp.clickGoogle();
         wait.until(ExpectedConditions.numberOfWindowsToBe(2));
         glp.switchWindow();
-        glp.enterEmailOrPhone(property.getInValidEmail());
+        glp.enterEmailOrPhone(property.getValidPhoneNumber());
         glp.clickNext();
         Assert.assertEquals(glp.getErrorMessage(),"Enter a valid email or phone number");
         driver.switchTo().window(oldWindow);
     }
+
 }
