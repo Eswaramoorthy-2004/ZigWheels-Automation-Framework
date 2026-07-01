@@ -9,6 +9,7 @@ import java.time.Duration;
 
 public class BaseTest {
     public WebDriver driver;
+
     @BeforeClass
     public void setup(){
         driver = new ChromeDriver();
@@ -17,6 +18,7 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
     }
+
     @AfterClass
     public void quitBrowser(){
         driver.quit();
