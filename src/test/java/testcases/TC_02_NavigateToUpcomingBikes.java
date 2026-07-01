@@ -11,7 +11,7 @@ public class TC_02_NavigateToUpcomingBikes extends BaseTest {
     public void testUpcomingBikesPage(){
         homePage = new HomePage(driver);
         homePage.hoverNewBikes();
-        homePage.clickUpcomingCars();
+        homePage.clickUpcomingBikes();
 
         String expectedURL = "https://www.zigwheels.com/upcoming-bikes";
         Assert.assertEquals(driver.getCurrentUrl(),expectedURL);

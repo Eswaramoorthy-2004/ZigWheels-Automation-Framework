@@ -8,8 +8,12 @@
             </class>
             <class name="testcases.TC_02_NavigateToUpcomingBikes">
             </class>
-            <class name="testcases.TC_16_ValidateGoogleLogin"></class>
-            <class name="testcases.TC_17_InvalidEmail"></class>
+            <class name="testcases.TC_03_HondaFilter">
+            </class>
+            <class name="testcases.TC_16_ValidateGoogleLogin">
+            </class>
+            <class name="testcases.TC_17_InvalidEmail">
+            </class>
         </classes>
     </test>
 </suite>
