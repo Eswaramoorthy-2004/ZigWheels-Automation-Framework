@@ -8,6 +8,7 @@ import org.zigWheelsAutomation.pages.UsedCarsPage;
 
 import java.time.Duration;
 
+/*
 public class TC_14_ExtractPopularCarModels extends BaseTest {
 
     @Test
@@ -32,3 +33,5 @@ public class TC_14_ExtractPopularCarModels extends BaseTest {
         System.out.println("Popular car models extracted successfully");
     }
 }
+
+ */

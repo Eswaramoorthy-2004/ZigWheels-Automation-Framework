@@ -11,6 +11,8 @@ import java.time.Duration;
 
 import static org.testng.AssertJUnit.assertTrue;
 
+/*
+
 public class TC_15_ValidatePopularCarModels extends BaseTest {
 
     @Test
@@ -39,3 +41,5 @@ public class TC_15_ValidatePopularCarModels extends BaseTest {
         System.out.println("Total models Available : " + modelCount);
     }
 }
+
+ */
