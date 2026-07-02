@@ -20,6 +20,9 @@ public class HomePage {
     @FindBy(xpath = "//a[contains(@title,'Upcoming Bikes')]")
     WebElement upcomingBikesElement;
 
+    @FindBy(xpath = "//img[@alt='Home']")
+    WebElement pageLogo;
+
     public void hoverNewBikes(){
         Actions action = new Actions(driver);
         action.moveToElement(newBikesElement).perform();
@@ -28,5 +31,8 @@ public class HomePage {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", upcomingBikesElement);
         js.executeScript("arguments[0].click();", upcomingBikesElement);
+    }
+    public boolean checkLogoIsDisplayed(){
+        return pageLogo.isDisplayed();
     }
 }
