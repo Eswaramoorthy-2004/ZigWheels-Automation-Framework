@@ -8,20 +8,31 @@ import org.zigWheelsAutomation.utilities.PropertyReader;
 
 import java.io.IOException;
 
-import static org.testng.AssertJUnit.assertEquals;
 
 public class TC_11_NavigateUsedcars extends BaseTest {
+    UsedCarsPage usedCarsPage;
+    PropertyReader propertyReader;
+
     @Test
-    public void clickUsedCarsSection() throws IOException {
+    public void testUsedCarsSection() throws IOException {
+        usedCarsPage = new UsedCarsPage(driver);
+        propertyReader = new PropertyReader();
+        usedCarsPage.clickMore();
+        usedCarsPage.clickUsedCars();
 
-        UsedCarsPage page = new UsedCarsPage(driver);
-        page.clickMore();
-        page.clickUsedCars();
+        String CurrentUrl = driver.getCurrentUrl();
+        String expectedUrl = propertyReader.getUsedcarpageurl();
+        Assert.assertEquals(CurrentUrl,expectedUrl,"The URL is Checked Successfully");
 
-        String Currenrurl = driver.getCurrentUrl();
-        PropertyReader p3 = new PropertyReader();
-        String expectedUrl = p3.getUsedcarpageurl();
 
-        Assert.assertEquals(Currenrurl,expectedUrl,"The URL is Checked Successfully");
-        System.out.println("Used Cars section opened successfully");
-}}
+        String actualTitle = driver.getTitle();
+        String expectedTitle = propertyReader.getUsedcarPageTitle();
+
+        Assert.assertEquals(actualTitle, expectedTitle,
+                "Page title validation failed");
+
+        System.out.println("URL : " + CurrentUrl);
+        System.out.println("Title : " + actualTitle);
+
+
+    }}

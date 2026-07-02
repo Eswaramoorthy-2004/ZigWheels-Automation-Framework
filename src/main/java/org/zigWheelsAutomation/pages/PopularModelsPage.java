@@ -11,23 +11,22 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class PopularModelsPage {
+public class PopularModelsPage extends UsedCarsPage {
 
-    WebDriver driver;
 
     public PopularModelsPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
     @FindBy(xpath = "//li[contains(@id,'mmvLi')]")
     List<WebElement> popularModels;
 
-    @FindBy(xpath = "//*[@id=\"gs_input5\"]")
+    @FindBy(xpath = "//*[@id='gs_input5']")
     WebElement cityInput;
 
-    @FindBy(xpath = "//*[@id='ui-id-5']")
-    WebElement selectCity;
+//    @FindBy(xpath = "//*[@id='ui-id-5']")
+//    WebElement selectCity;
 
     public void selectCity(String city) {
 
@@ -55,14 +54,21 @@ public class PopularModelsPage {
 
     public void printModels() {
 
-        for (WebElement model : popularModels) {
-            String name = model.getText().trim();
-            if (!name.isEmpty()) {
-                System.out.println(name);
-            }
-        }
 
-    }
+        int count = driver.findElements(
+                By.xpath("//li[contains(@id,'mmvLi')]")).size();
+        for (int i = 0; i < count; i++) {
+            List<WebElement> freshModels = driver.findElements(
+                    By.xpath("//li[contains(@id,'mmvLi')]"));
+            try {
+                String text = freshModels.get(i).getText().trim();
+                if (!text.isEmpty()) {
+                    System.out.println(text);
+                }}
+            catch (Exception e) {
+                System.out.println("Skipped stale element at index " + i);
+            }}}
+
     public String getSelectedCity() {
         return cityInput.getAttribute("value");
     }

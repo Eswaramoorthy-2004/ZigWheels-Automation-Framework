@@ -48,4 +48,7 @@ public class PropertyReader {
         return prop.getProperty("usedcarspage.url");
      }
 
+    public String getUsedcarPageTitle() {
+        return prop.getProperty("usedcarpagetitle");
+    }
 }

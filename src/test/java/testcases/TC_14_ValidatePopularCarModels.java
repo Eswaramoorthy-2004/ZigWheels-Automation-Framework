@@ -1,48 +1,61 @@
 package testcases;
 
 import basetest.BaseTest;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.zigWheelsAutomation.pages.PopularModelsPage;
-import org.zigWheelsAutomation.pages.UsedCarsPage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
 
 import java.io.IOException;
 import java.time.Duration;
 
-import static org.testng.AssertJUnit.assertTrue;
-
-
-
 public class TC_14_ValidatePopularCarModels extends BaseTest {
+
+    PopularModelsPage popularModelsPage;
+    PropertyReader propertyReader;
 
     @Test
     public void validatePopularCarModels() throws IOException {
 
-        UsedCarsPage page = new UsedCarsPage(driver);
-        page.clickMore();
-        page.clickUsedCars();
+        popularModelsPage = new PopularModelsPage(driver);
+        propertyReader = new PropertyReader();
 
-        PopularModelsPage page1 = new PopularModelsPage(driver);
-        PropertyReader p1 = new PropertyReader();
-        page1.selectCity(p1.getCity());
+        popularModelsPage.clickMore();
+        popularModelsPage.clickUsedCars();
+        popularModelsPage.selectCity(propertyReader.getCity());
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
-        wait.until(driver -> page1.getModelCount() > 0);
+        wait.until(driver -> popularModelsPage.getModelCount() > 0);
 
-        //JavascriptExecutor js = (JavascriptExecutor) driver;
-        //js.executeScript("window.scrollBy(0,500)");
+        int modelCount = popularModelsPage.getModelCount();
 
-        int modelCount = page1.getModelCount();
+        Assert.assertFalse(
+                driver.getTitle().isEmpty(),
+                "Page title should not be empty"
+        );
 
-        assertTrue(modelCount > 0);
+        Assert.assertEquals(
+                popularModelsPage.getSelectedCity(),
+                propertyReader.getCity(),
+                "Selected city does not match expected city"
+        );
 
-        page1.printModels();
+        Assert.assertTrue(
+                modelCount > 0,
+                "No popular car models are displayed"
+        );
 
-        System.out.println("Total models Available : " + modelCount);
+        Assert.assertTrue(
+                modelCount >= 5,
+                "Less than 5 popular car models are displayed"
+        );
+
+        popularModelsPage.printModels();
+
+        System.out.println("Page Title : " + driver.getTitle());
+        System.out.println("Current URL : " + driver.getCurrentUrl());
+        System.out.println("Selected City : " + popularModelsPage.getSelectedCity());
+        System.out.println("Total Models Available : " + modelCount);
     }
 }
-
-

@@ -6,40 +6,56 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.zigWheelsAutomation.pages.PopularModelsPage;
-import org.zigWheelsAutomation.pages.UsedCarsPage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
 
 import java.io.IOException;
 import java.time.Duration;
 
-import static org.testng.AssertJUnit.assertTrue;
-
-
 public class TC_13_ExtractPopularCarModels extends BaseTest {
+
+    PopularModelsPage popularModelsPage;
+    PropertyReader propertyReader;
 
     @Test
     public void extractPopularCarModels() throws IOException {
 
-        UsedCarsPage page = new UsedCarsPage(driver);
-        PropertyReader p =new PropertyReader();
+        propertyReader = new PropertyReader();
+        popularModelsPage = new PopularModelsPage(driver);
 
-        page.clickMore();
-        page.clickUsedCars();
-        PopularModelsPage page1 = new PopularModelsPage(driver);
-        page1.selectCity(p.getCity());
+        popularModelsPage.clickMore();
+        popularModelsPage.clickUsedCars();
+        popularModelsPage.selectCity(propertyReader.getCity());
+
+        String selectedCity = popularModelsPage.getSelectedCity();
+
+        Assert.assertEquals(
+                selectedCity,
+                propertyReader.getCity(),
+                "Selected city is not matching the expected city"
+        );
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(driver -> page1.getModelCount() > 0);
+        wait.until(driver -> popularModelsPage.getModelCount() > 0);
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");
 
-        int modelCount = page1.getModelCount();
-        assertTrue(modelCount > 0);
+        int modelCount = popularModelsPage.getModelCount();
 
-        page1.printModels();
+
+        Assert.assertTrue(
+                modelCount > 0,
+                "Popular model count should be greater than zero"
+        );
+        Assert.assertFalse(
+                driver.getTitle().isEmpty(),
+                "Page title should not be empty"
+        );
+
+
+        System.out.println("Selected City : " + selectedCity);
+        System.out.println("Page Title : " + driver.getTitle());
+        System.out.println("Current URL : " + driver.getCurrentUrl());
         System.out.println("Popular car models extracted successfully");
     }
 }
-
-
