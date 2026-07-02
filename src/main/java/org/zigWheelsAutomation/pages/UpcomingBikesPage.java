@@ -10,7 +10,6 @@ import java.util.List;
 
 public class UpcomingBikesPage extends  UpcomingHondaBikesPage{
 
-    // ---------- WebElements ----------
     @FindBy(xpath = "//a[contains(@data-track-label,'model')]")
     private List<WebElement> bikeNameElements;
 

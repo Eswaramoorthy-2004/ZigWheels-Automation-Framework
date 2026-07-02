@@ -1,5 +1,6 @@
 package org.zigWheelsAutomation.pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -24,6 +25,8 @@ public class HomePage {
         action.moveToElement(newBikesElement).perform();
     }
     public void clickUpcomingBikes(){
-        upcomingBikesElement.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", upcomingBikesElement);
+        js.executeScript("arguments[0].click();", upcomingBikesElement);
     }
 }
