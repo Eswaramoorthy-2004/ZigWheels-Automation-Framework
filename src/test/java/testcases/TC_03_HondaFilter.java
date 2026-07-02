@@ -20,11 +20,13 @@ public class TC_03_HondaFilter extends BaseTest {
         upcomingHondaBikesPage.hoverNewBikes();
         upcomingHondaBikesPage.clickUpcomingBikes();
         upcomingHondaBikesPage.clickHondaButton();
-
         String expectedUrl = propertyReader.getHondaBikesURL();
-        Assert.assertEquals(driver.getCurrentUrl(),expectedUrl);
-
+        Assert.assertEquals(
+                driver.getCurrentUrl(),expectedUrl
+        );
         String expectedTitle = propertyReader.getUpcomingHondaPageTitle();
-        Assert.assertEquals(driver.getTitle(),expectedTitle);
+        Assert.assertEquals(
+                driver.getTitle(),expectedTitle
+        );
     }
 }
