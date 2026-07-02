@@ -40,9 +40,12 @@ public class PropertyReader {
         return prop.getProperty("invalidPhoneNumber");
     }
 
-    public String getCity(){
+    public String getCity() {
+
         return prop.getProperty("city");
     }
-
+     public String getUsedcarpageurl(){
+        return prop.getProperty("usedcarspage.url");
+     }
 
 }

@@ -14,19 +14,28 @@ public class TC_12_SelectLocation extends BaseTest {
     @Test
     public void selectChennaiLocation() throws IOException {
 
-        UsedCarsPage page = new UsedCarsPage(driver);
-        page.clickMore();
-        page.clickUsedCars();
 
-        PopularModelsPage page1 = new PopularModelsPage(driver);
-        PropertyReader p0 = new PropertyReader();
-        page1.selectCity(p0.getCity());
+        UsedCarsPage usedCarsPage = new UsedCarsPage(driver);
+        usedCarsPage.clickMore();
+        usedCarsPage.clickUsedCars();
 
+        PropertyReader propertyReader = new PropertyReader();
+        String expectedCity = propertyReader.getCity();
 
-        String selectedCity = page1.getSelectedCity();
+        PopularModelsPage popularModelsPage = new PopularModelsPage(driver);
+        popularModelsPage.selectCity(expectedCity);
 
-        Assert.assertTrue(selectedCity.contains("Chennai"));
+        String selectedCity = popularModelsPage.getSelectedCity();
 
-        System.out.println("Chennai location selected successfully");
+        System.out.println("Expected City : " + expectedCity);
+        System.out.println("Selected City : " + selectedCity);
+
+        Assert.assertTrue(
+                selectedCity.contains(expectedCity),
+                "City selection verification failed"
+        );
+
+        System.out.println(expectedCity + " location selected successfully");
+
     }
 }
