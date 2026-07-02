@@ -26,7 +26,9 @@ public class TC_18_InvalidPhoneNumber extends BaseTest{
         glp.switchWindow();
         glp.enterEmailOrPhone(property.getValidPhoneNumber());
         glp.clickNext();
-        Assert.assertEquals(glp.getErrorMessage(),"Enter a valid email or phone number");
+        Assert.assertEquals(
+                glp.getErrorMessage(),"Enter a valid email or phone number"
+        );
         driver.switchTo().window(oldWindow);
     }
 }

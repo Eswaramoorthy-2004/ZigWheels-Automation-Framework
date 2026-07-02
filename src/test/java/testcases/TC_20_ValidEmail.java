@@ -30,9 +30,10 @@ public class TC_20_ValidEmail extends BaseTest {
         emailPageTitle=glp.pageTitle.getText();
         glp.enterEmailOrPhone(property.getValidEmail());
         glp.clickNext();
-        wait.until(ExpectedConditions.not(ExpectedConditions
-                .textToBePresentInElement(glp.pageTitle,emailPageTitle)));
-        Assert.assertNotEquals(emailPageTitle,glp.pageTitle.getText(),"Password field should be displayed after entering valid email");
+        wait.until(ExpectedConditions.not(ExpectedConditions.textToBePresentInElement(glp.pageTitle,emailPageTitle)));
+        Assert.assertNotEquals(
+                emailPageTitle,glp.pageTitle.getText(),"Password field should be displayed after entering valid email"
+        );
         driver.switchTo().window(oldWindow);
     }
 }
