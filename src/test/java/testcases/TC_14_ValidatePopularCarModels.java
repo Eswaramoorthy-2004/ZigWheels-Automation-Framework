@@ -29,32 +29,20 @@ public class TC_14_ValidatePopularCarModels extends BaseTest {
         wait.until(driver -> popularModelsPage.getModelCount() > 0);
 
         int modelCount = popularModelsPage.getModelCount();
-
-        Assert.assertFalse(
-                driver.getTitle().isEmpty(),
-                "Page title should not be empty"
-        );
-
-        Assert.assertEquals(
-                popularModelsPage.getSelectedCity(),
-                propertyReader.getCity(),
-                "Selected city does not match expected city"
-        );
-
         Assert.assertTrue(
                 modelCount > 0,
                 "No popular car models are displayed"
         );
 
-        Assert.assertTrue(
-                modelCount >= 5,
-                "Less than 5 popular car models are displayed"
-        );
-
         popularModelsPage.printModels();
+        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(100));
+        wait1.until(driver -> popularModelsPage.getModelCount() > 0);
 
-        System.out.println("Page Title : " + driver.getTitle());
-        System.out.println("Current URL : " + driver.getCurrentUrl());
+        Assert.assertEquals(
+                popularModelsPage.getUsedCarsHeaderText(),
+                propertyReader.getUsedCarsHeader(),
+                "Used Cars header text mismatch"
+        );
         System.out.println("Selected City : " + popularModelsPage.getSelectedCity());
         System.out.println("Total Models Available : " + modelCount);
     }

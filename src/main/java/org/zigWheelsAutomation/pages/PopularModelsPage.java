@@ -25,6 +25,15 @@ public class PopularModelsPage extends UsedCarsPage {
     @FindBy(xpath = "//*[@id='gs_input5']")
     WebElement cityInput;
 
+    @FindBy(xpath = "//h1[@id='usedcarttlID']")
+    WebElement usedCarsHeader;
+
+    @FindBy(xpath = "//span[contains(@class,'zw-sr-frstLevActive')]")
+    WebElement brandAndModelExpandedIcon;
+
+    @FindBy(xpath = "//div[contains(text(),'Popular Models')]")
+    WebElement popularModelsHeader;
+
     public void selectCity(String city) {
 
         cityInput.clear();
@@ -35,8 +44,7 @@ public class PopularModelsPage extends UsedCarsPage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         WebElement cityOption = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath(cityXpath))
-        );
+                ExpectedConditions.visibilityOfElementLocated(By.xpath(cityXpath)));
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         //js.executeScript("arguments[0].scrollIntoView(true);", cityOption);
@@ -45,7 +53,6 @@ public class PopularModelsPage extends UsedCarsPage {
     }
 
     public int getModelCount() {
-
         return popularModels.size();
     }
 
@@ -72,5 +79,17 @@ public class PopularModelsPage extends UsedCarsPage {
         if (popularModels.size() > 0) {
             popularModels.get(0).click();
         }
+    }
+
+    public boolean isPopularModelsDisplayed() {
+        return popularModelsHeader.isDisplayed();
+    }
+
+    public String getUsedCarsHeaderText() {
+        return usedCarsHeader.getText();
+    }
+
+    public boolean isBrandAndModelExpanded() {
+        return brandAndModelExpandedIcon.isDisplayed();
     }
 }

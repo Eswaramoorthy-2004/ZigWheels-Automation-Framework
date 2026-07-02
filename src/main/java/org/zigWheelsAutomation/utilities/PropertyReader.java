@@ -7,9 +7,9 @@ import java.util.Properties;
 public class PropertyReader {
     Properties prop;
     public  PropertyReader() throws IOException{
-            FileInputStream fis = new FileInputStream("src/test/resources/config/config.properties");
-            prop = new Properties();
-            prop.load(fis);
+        FileInputStream fis = new FileInputStream("src/test/resources/config/config.properties");
+        prop = new Properties();
+        prop.load(fis);
     }
     public String getPageTitle() {
         return prop.getProperty("pageTitle");
@@ -44,11 +44,25 @@ public class PropertyReader {
 
         return prop.getProperty("city");
     }
-     public String getUsedcarpageurl(){
+    public String getUsedcarpageurl(){
         return prop.getProperty("usedcarspage.url");
-     }
+    }
 
     public String getUsedcarPageTitle() {
         return prop.getProperty("usedcarpagetitle");
     }
+
+    public String getUsedCarsHeader() {
+        return prop.getProperty("usedCarsHeader");
+    }
+
+    public boolean getBrandAndModelStatus() {
+        return Boolean.parseBoolean(
+                prop.getProperty("brandAndModelStatus")
+        );
+    }
+
+
+
+
 }

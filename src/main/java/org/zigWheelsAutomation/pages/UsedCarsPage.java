@@ -34,5 +34,3 @@ public class UsedCarsPage {
         js.executeScript("arguments[0].click();", usedCarsOption);
 
     }}
-
-

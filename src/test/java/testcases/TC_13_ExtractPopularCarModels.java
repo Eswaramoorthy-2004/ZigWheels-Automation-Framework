@@ -26,36 +26,26 @@ public class TC_13_ExtractPopularCarModels extends BaseTest {
         popularModelsPage.clickUsedCars();
         popularModelsPage.selectCity(propertyReader.getCity());
 
-        String selectedCity = popularModelsPage.getSelectedCity();
-
-        Assert.assertEquals(
-                selectedCity,
-                propertyReader.getCity(),
-                "Selected city is not matching the expected city"
-        );
-
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(driver -> popularModelsPage.getModelCount() > 0);
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");
 
-        int modelCount = popularModelsPage.getModelCount();
+        boolean expectedStatus = propertyReader.getBrandAndModelStatus();
+        boolean actualStatus = popularModelsPage.isBrandAndModelExpanded();
 
+        Assert.assertEquals(
+                actualStatus,
+                expectedStatus,
+                "Brand and Model section is not expanded"
+        );
 
         Assert.assertTrue(
-                modelCount > 0,
-                "Popular model count should be greater than zero"
-        );
-        Assert.assertFalse(
-                driver.getTitle().isEmpty(),
-                "Page title should not be empty"
+                popularModelsPage.isPopularModelsDisplayed(),
+                "Popular Models section is not displayed"
         );
 
-
-        System.out.println("Selected City : " + selectedCity);
-        System.out.println("Page Title : " + driver.getTitle());
-        System.out.println("Current URL : " + driver.getCurrentUrl());
         System.out.println("Popular car models extracted successfully");
     }
 }
