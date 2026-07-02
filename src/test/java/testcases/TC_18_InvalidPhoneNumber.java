@@ -7,7 +7,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.zigWheelsAutomation.pages.LoginPage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
-
 import java.io.IOException;
 import java.time.Duration;
 
@@ -30,5 +29,4 @@ public class TC_18_InvalidPhoneNumber extends BaseTest{
         Assert.assertEquals(glp.getErrorMessage(),"Enter a valid email or phone number");
         driver.switchTo().window(oldWindow);
     }
-
 }
