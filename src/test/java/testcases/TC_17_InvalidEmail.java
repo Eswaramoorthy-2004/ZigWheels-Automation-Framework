@@ -1,17 +1,14 @@
 package testcases;
 
 import basetest.BaseTest;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.zigWheelsAutomation.pages.LoginPage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
-
 import java.io.IOException;
 import java.time.Duration;
-
 
 public class TC_17_InvalidEmail extends BaseTest {
     LoginPage glp;
