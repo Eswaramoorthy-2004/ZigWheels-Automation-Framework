@@ -24,17 +24,14 @@ public class TC_12_SelectLocation extends BaseTest {
 
         PopularModelsPage popularModelsPage = new PopularModelsPage(driver);
         popularModelsPage.selectCity(expectedCity);
-
         String selectedCity = popularModelsPage.getSelectedCity();
-
         System.out.println("Expected City : " + expectedCity);
         System.out.println("Selected City : " + selectedCity);
 
         Assert.assertTrue(
                 selectedCity.contains(expectedCity),
-                "City selection verification failed"
+                "City selection verified"
         );
-
         System.out.println(expectedCity + " location selected successfully");
 
     }

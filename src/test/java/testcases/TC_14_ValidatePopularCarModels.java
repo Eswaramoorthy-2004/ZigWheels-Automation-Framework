@@ -22,16 +22,14 @@ public class TC_14_ValidatePopularCarModels extends BaseTest {
     public void validatePopularCarModels() throws IOException {
 
         UsedCarsPage page = new UsedCarsPage(driver);
-
         page.clickMore();
         page.clickUsedCars();
+
         PopularModelsPage page1 = new PopularModelsPage(driver);
         PropertyReader p1 = new PropertyReader();
         page1.selectCity(p1.getCity());
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
-        wait.until(driver -> page1.getModelCount() > 0);
-
         wait.until(driver -> page1.getModelCount() > 0);
 
         //JavascriptExecutor js = (JavascriptExecutor) driver;
