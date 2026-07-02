@@ -35,10 +35,8 @@ public class PropertyReader {
     public String getInValidEmail(){
         return prop.getProperty("invalidEmail");
     }
-
     public String getValidPhoneNumber(){
         return prop.getProperty("invalidPhoneNumber");
     }
-
 
 }
