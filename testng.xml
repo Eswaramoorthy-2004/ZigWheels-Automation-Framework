@@ -14,6 +14,9 @@
             </class>
             <class name="testcases.TC_07_ExtractBikePrices">
             </class>
+            <class name="testcases.TC_08_FilterBikesBelow5Lakh">
+
+            </class>
             <class name="testcases.TC_16_ValidateLoginOptions">
             </class>
             <class name="testcases.TC_17_InvalidEmail">

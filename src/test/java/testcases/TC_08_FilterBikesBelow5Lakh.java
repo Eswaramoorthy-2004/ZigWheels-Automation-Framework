@@ -23,17 +23,8 @@ public class TC_08_FilterBikesBelow5Lakh extends BaseTest {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 
         double threshold = 5.0;
-
-        // Fetch filtered prices and bike-price map
         List<String> belowThresholdPrices = upcomingBikesPage.getPricesBelow(threshold);
         Map<String, String> bikesBelowThreshold = upcomingBikesPage.getBikesBelow(threshold);
-
-        System.out.println("=========== BIKES BELOW Rs. 5 LAKH ===========");
-        bikesBelowThreshold.forEach((bike, price) ->
-                System.out.println(bike + "  →  " + price));
-        System.out.println("Total bikes below Rs. 5 Lakh: " + bikesBelowThreshold.size());
-
-        // ---------- Assertions ----------
         Assert.assertNotNull(belowThresholdPrices,
                 "Filtered price list should not be null");
 
