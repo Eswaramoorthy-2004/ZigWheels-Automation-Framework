@@ -21,15 +21,6 @@ public class UsedCarsPage {
 
     @FindBy(xpath = "//*[@id=\"headerNewVNavWrap\"]/nav/ul/li[5]/ul/li[2]/a")
     WebElement usedCarsOption;
-//
-//    @FindBy(xpath = "//*[@id=\"gs_input5\"]")
-//    WebElement cityInput;
-//
-//    @FindBy(xpath = "//*[@id='ui-id-5']")
-//    WebElement selectCity;
-//
-//    @FindBy(xpath = "//li[contains(@id,'mmvLi')]")
-//    List<WebElement> popularModels;
 
     public void clickMore() {
         moreMenu.click();
@@ -44,26 +35,4 @@ public class UsedCarsPage {
 
     }}
 
-    /*
-    public void selectCity(String city) {
-        cityInput.sendKeys(city);
-        selectCity.click();
-    }
-
-    public int getModelCount() {
-        return popularModels.size();
-    }
-
-    public void printModels() {
-        for (WebElement model : popularModels) {
-            System.out.println(model.getText());
-        }
-    }
-
-    public void clickFirstModel() {
-        if (popularModels.size() > 0) {
-            popularModels.get(0).click();
-        }
-
-     */
 

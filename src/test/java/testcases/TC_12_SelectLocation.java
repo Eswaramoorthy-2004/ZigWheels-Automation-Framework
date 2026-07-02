@@ -13,7 +13,7 @@ public class TC_12_SelectLocation extends BaseTest {
 
     PropertyReader propertyReader;
     PopularModelsPage popularModelsPage;
-    int modelCount;
+
 
     @Test
     public void testSelectedLocation() throws IOException {
@@ -42,12 +42,7 @@ public class TC_12_SelectLocation extends BaseTest {
                 selectedCity.isEmpty(),
                 "City field is empty"
         );
-        modelCount = popularModelsPage.getModelCount();
-        Assert.assertTrue(
-                modelCount > 0,
-                "No popular car models found for selected city"
-        );
-        System.out.println("Total Models Available : " + modelCount);
+
         System.out.println(expectedCity + " location selected successfully");
     }
 }

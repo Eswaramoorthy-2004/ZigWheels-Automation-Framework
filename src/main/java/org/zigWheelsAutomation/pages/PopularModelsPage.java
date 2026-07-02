@@ -25,9 +25,6 @@ public class PopularModelsPage extends UsedCarsPage {
     @FindBy(xpath = "//*[@id='gs_input5']")
     WebElement cityInput;
 
-//    @FindBy(xpath = "//*[@id='ui-id-5']")
-//    WebElement selectCity;
-
     public void selectCity(String city) {
 
         cityInput.clear();
@@ -53,8 +50,6 @@ public class PopularModelsPage extends UsedCarsPage {
     }
 
     public void printModels() {
-
-
         int count = driver.findElements(
                 By.xpath("//li[contains(@id,'mmvLi')]")).size();
         for (int i = 0; i < count; i++) {
