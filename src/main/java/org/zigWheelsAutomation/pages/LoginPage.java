@@ -52,7 +52,8 @@ public class LoginPage {
     public WebElement pageTitle;
 
     public void goLogin(){
-        login.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();",login);
         oldWindowX = driver.getWindowHandle();
     }
     public void clickGoogle() throws InterruptedException {
