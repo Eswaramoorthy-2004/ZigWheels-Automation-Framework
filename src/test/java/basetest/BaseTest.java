@@ -8,7 +8,6 @@ import org.zigWheelsAutomation.utilities.PropertyReader;
 import java.io.IOException;
 import java.time.Duration;
 
-
 public class BaseTest {
     public WebDriver driver;
     PropertyReader p;
