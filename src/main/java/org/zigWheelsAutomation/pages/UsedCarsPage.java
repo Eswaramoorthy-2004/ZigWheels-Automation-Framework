@@ -16,10 +16,10 @@ public class UsedCarsPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//*[@id='headerNewVNavWrap']/nav/ul/li[5]/span")
+    @FindBy(xpath = "//span[text()='MORE']")
     WebElement moreMenu;
 
-    @FindBy(xpath = "//*[@id=\"headerNewVNavWrap\"]/nav/ul/li[5]/ul/li[2]/a")
+    @FindBy(xpath = "//a[contains(@title,'Used Cars') and contains(@data-track-label,'nav-used-car')]")
     WebElement usedCarsOption;
 
     public void clickMore() {
