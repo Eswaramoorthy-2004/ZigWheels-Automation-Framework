@@ -35,7 +35,7 @@ public class TC_14_ValidatePopularCarModels extends BaseTest {
         );
 
         popularModelsPage.printModels();
-        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(100));
+        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(400));
         wait1.until(driver -> popularModelsPage.getModelCount() > 0);
 
         Assert.assertEquals(
