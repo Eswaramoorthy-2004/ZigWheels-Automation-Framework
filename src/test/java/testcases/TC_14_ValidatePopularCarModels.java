@@ -17,27 +17,21 @@ public class TC_14_ValidatePopularCarModels extends BaseTest {
 
     @Test
     public void validatePopularCarModels() throws IOException {
-
         popularModelsPage = new PopularModelsPage(driver);
         propertyReader = new PropertyReader();
-
         popularModelsPage.clickMore();
         popularModelsPage.clickUsedCars();
         popularModelsPage.selectCity(propertyReader.getCity());
-
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
         wait.until(driver -> popularModelsPage.getModelCount() > 0);
-
         int modelCount = popularModelsPage.getModelCount();
         Assert.assertTrue(
                 modelCount > 0,
                 "No popular car models are displayed"
         );
-
         popularModelsPage.printModels();
         WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(400));
         wait1.until(driver -> popularModelsPage.getModelCount() > 0);
-
         Assert.assertEquals(
                 popularModelsPage.getUsedCarsHeaderText(),
                 propertyReader.getUsedCarsHeader(),

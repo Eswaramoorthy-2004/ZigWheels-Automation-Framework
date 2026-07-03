@@ -7,7 +7,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.zigWheelsAutomation.pages.LoginPage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
-
 import java.io.IOException;
 import java.time.Duration;
 

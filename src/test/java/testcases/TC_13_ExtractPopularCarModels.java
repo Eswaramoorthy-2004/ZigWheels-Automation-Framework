@@ -21,17 +21,13 @@ public class TC_13_ExtractPopularCarModels extends BaseTest {
 
         propertyReader = new PropertyReader();
         popularModelsPage = new PopularModelsPage(driver);
-
         popularModelsPage.clickMore();
         popularModelsPage.clickUsedCars();
         popularModelsPage.selectCity(propertyReader.getCity());
-
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(driver -> popularModelsPage.getModelCount() > 0);
-
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");
-
         boolean expectedStatus = propertyReader.getBrandAndModelStatus();
         boolean actualStatus = popularModelsPage.isBrandAndModelExpanded();
 

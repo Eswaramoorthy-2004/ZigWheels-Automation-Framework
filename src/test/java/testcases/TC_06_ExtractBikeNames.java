@@ -20,9 +20,14 @@ public class TC_06_ExtractBikeNames extends BaseTest {
         upcomingBikesPage.clickHondaButton();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         List<String> names = upcomingBikesPage.getBikeNames();
-
-        Assert.assertNotNull(names, "Bike names list should not be null");
-        Assert.assertFalse(names.isEmpty(), "Bike names list should not be empty");
-        Assert.assertTrue(names.size() > 0, "At least one bike name should be captured");
+        Assert.assertNotNull(
+                names, "Bike names list should not be null"
+        );
+        Assert.assertFalse(
+                names.isEmpty(), "Bike names list should not be empty"
+        );
+        Assert.assertTrue(
+                names.size() > 0, "At least one bike name should be captured"
+        );
     }
 }

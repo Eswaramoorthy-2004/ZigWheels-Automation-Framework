@@ -19,20 +19,14 @@ public class TC_11_NavigateUsedcars extends BaseTest {
         propertyReader = new PropertyReader();
         usedCarsPage.clickMore();
         usedCarsPage.clickUsedCars();
-
         String CurrentUrl = driver.getCurrentUrl();
         String expectedUrl = propertyReader.getUsedcarpageurl();
         Assert.assertEquals(CurrentUrl,expectedUrl,"The URL is Checked Successfully");
-
-
         String actualTitle = driver.getTitle();
         String expectedTitle = propertyReader.getUsedcarPageTitle();
-
         Assert.assertEquals(actualTitle, expectedTitle,
                 "Page title validation failed");
 
         System.out.println("URL : " + CurrentUrl);
         System.out.println("Title : " + actualTitle);
-
-
     }}
