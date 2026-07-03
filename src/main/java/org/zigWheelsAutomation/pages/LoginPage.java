@@ -52,6 +52,7 @@ public class LoginPage {
     public WebElement pageTitle;
 
     public void goLogin(){
+        wait.until(ExpectedConditions.elementToBeClickable(login));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();",login);
         oldWindowX = driver.getWindowHandle();
@@ -59,6 +60,7 @@ public class LoginPage {
     public void clickGoogle() throws InterruptedException {
         int retries = 3;
         for (int i = 0; i < retries; i++) {
+            wait.until(ExpectedConditions.visibilityOf(google));
             google.click();
             try {
                 new WebDriverWait(driver, Duration.ofSeconds(3))
