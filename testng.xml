@@ -16,6 +16,14 @@
             </class>
             <class name="testcases.TC_08_FilterBikesBelow5Lakh">
             </class>
+            <class name="testcases.TC_11_NavigateUsedcars">
+            </class>
+            <class name="testcases.TC_12_SelectLocation">
+            </class>
+            <class name="testcases.TC_13_ExtractPopularCarModels">
+            </class>
+            <class name="testcases.TC_14_ValidatePopularCarModels">
+            </class>
             <class name="testcases.TC_16_ValidateLoginOptions">
             </class>
             <class name="testcases.TC_17_InvalidEmail">
