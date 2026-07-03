@@ -4,7 +4,6 @@ import basetest.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.zigWheelsAutomation.pages.UpcomingBikesPage;
-import org.zigWheelsAutomation.pages.UpcomingHondaBikesPage;
 
 import java.time.Duration;
 import java.util.List;

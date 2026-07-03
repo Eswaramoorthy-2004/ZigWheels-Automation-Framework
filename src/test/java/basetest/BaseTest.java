@@ -2,14 +2,12 @@ package basetest;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.zigWheelsAutomation.utilities.PropertyReader;
-
 import java.io.IOException;
 import java.time.Duration;
-import java.util.Properties;
+
 
 public class BaseTest {
     public WebDriver driver;

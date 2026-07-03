@@ -27,9 +27,7 @@ public class UsedCarsPage {
     }
 
     public void clickUsedCars() {
-
         JavascriptExecutor js = (JavascriptExecutor) driver;
-
         js.executeScript("arguments[0].scrollIntoView({block:'center'});", usedCarsOption);
         js.executeScript("arguments[0].click();", usedCarsOption);
 

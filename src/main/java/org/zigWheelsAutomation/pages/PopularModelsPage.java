@@ -13,7 +13,6 @@ import java.util.List;
 
 public class PopularModelsPage extends UsedCarsPage {
 
-
     public PopularModelsPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
@@ -73,12 +72,6 @@ public class PopularModelsPage extends UsedCarsPage {
 
     public String getSelectedCity() {
         return cityInput.getAttribute("value");
-    }
-
-    public void clickFirstModel() {
-        if (popularModels.size() > 0) {
-            popularModels.get(0).click();
-        }
     }
 
     public boolean isPopularModelsDisplayed() {

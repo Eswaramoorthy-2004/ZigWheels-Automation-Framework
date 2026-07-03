@@ -52,7 +52,6 @@ public class UpcomingBikesPage extends  UpcomingHondaBikesPage{
         return getBikePrices().size();
     }
 
-
     public double parsePriceToLakh(String priceText) {
         try {
             String cleaned = priceText
@@ -66,12 +65,6 @@ public class UpcomingBikesPage extends  UpcomingHondaBikesPage{
         }
     }
 
-    /**
-     * Returns only the price strings that are strictly below the given threshold (in Lakh).
-     *
-     * @param thresholdInLakh the upper limit in Lakh (exclusive), e.g., 5.0 for < Rs. 5 Lakh
-     * @return list of price strings like ["Rs. 2.15 Lakh", "Rs. 3.80 Lakh", ...]
-     */
     public List<String> getPricesBelow(double thresholdInLakh) {
         List<String> filtered = new ArrayList<>();
         for (String price : getBikePrices()) {
@@ -83,13 +76,6 @@ public class UpcomingBikesPage extends  UpcomingHondaBikesPage{
         return filtered;
     }
 
-    /**
-     * Returns a map of Bike Name → Price for all bikes priced below the given threshold.
-     * Uses LinkedHashMap to preserve the display order from the website.
-     *
-     * @param thresholdInLakh the upper limit in Lakh (exclusive), e.g., 5.0 for < Rs. 5 Lakh
-     * @return ordered map like {"Yamaha YZF-R2" → "Rs. 2.15 Lakh", ...}
-     */
     public Map<String, String> getBikesBelow(double thresholdInLakh) {
         Map<String, String> result = new LinkedHashMap<>();
         List<String> names = getBikeNames();

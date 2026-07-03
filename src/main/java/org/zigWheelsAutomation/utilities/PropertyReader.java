@@ -41,7 +41,6 @@ public class PropertyReader {
     }
 
     public String getCity() {
-
         return prop.getProperty("city");
     }
     public String getUsedcarpageurl(){
