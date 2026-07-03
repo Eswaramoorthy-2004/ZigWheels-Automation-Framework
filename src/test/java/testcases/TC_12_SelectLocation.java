@@ -34,6 +34,6 @@ public class TC_12_SelectLocation extends BaseTest {
                 selectedCity.isEmpty(),
                 "City field is empty"
         );
-        System.out.println(expectedCity + " location selected successfully");
+        //System.out.println(expectedCity + " location selected successfully");
     }
 }

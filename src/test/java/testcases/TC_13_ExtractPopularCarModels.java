@@ -42,6 +42,6 @@ public class TC_13_ExtractPopularCarModels extends BaseTest {
                 "Popular Models section is not displayed"
         );
 
-        System.out.println("Popular car models extracted successfully");
+        //System.out.println("Popular car models extracted successfully");
     }
 }
