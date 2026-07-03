@@ -18,11 +18,13 @@ import static java.time.Duration.*;
 
 public class LoginPage {
     WebDriver driver;
+    public String oldWindowX;
+
     public LoginPage(WebDriver driver){
         this.driver=driver;
         PageFactory.initElements(driver,this);
     }
-    public String oldWindowX;
+
     WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 
     @FindBy(id="des_lIcon")
@@ -49,9 +51,9 @@ public class LoginPage {
     @FindBy(xpath = "//h1[@id='headingText']")
     public WebElement pageTitle;
 
-
     public void goLogin(){
-        login.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();",login);
         oldWindowX = driver.getWindowHandle();
     }
     public void clickGoogle() throws InterruptedException {
