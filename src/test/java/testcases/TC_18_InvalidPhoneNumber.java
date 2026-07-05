@@ -21,7 +21,6 @@ public class TC_18_InvalidPhoneNumber extends BaseTest{
     @Test
     public void invalidEmail() throws InterruptedException, IOException {
         property = new PropertyReader();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         glp = new LoginPage(driver);
         ss = new ScreenshotUtils(driver);
         glp.goLogin();

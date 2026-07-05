@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.zigWheelsAutomation.utilities.JavaScriptUtil;
+import org.zigWheelsAutomation.utilities.WaitUtil;
 
 import javax.swing.*;
 import java.time.Duration;
@@ -18,12 +19,13 @@ public class LoginPage {
     WebDriver driver;
     public String oldWindow;
     JavaScriptUtil js;
-    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+    WaitUtil wait;
 
     public LoginPage(WebDriver driver){
         this.driver=driver;
         PageFactory.initElements(driver,this);
         js = new JavaScriptUtil(driver);
+        wait = new WaitUtil(driver);
     }
 
     @FindBy(id="des_lIcon")
@@ -51,14 +53,14 @@ public class LoginPage {
     public WebElement pageTitle;
 
     public void goLogin(){
-        wait.until(ExpectedConditions.elementToBeClickable(login));
+        wait.waitForClickable(login);
         js.clickElement(login);
         oldWindow = driver.getWindowHandle();
     }
     public void clickGoogle() throws InterruptedException {
         int retries = 3;
         for (int i = 0; i < retries; i++) {
-            wait.until(ExpectedConditions.visibilityOf(google));
+            wait.waitForVisibility(google);
             google.click();
             try {
                 new WebDriverWait(driver, Duration.ofSeconds(3))
@@ -87,7 +89,7 @@ public class LoginPage {
     }
 
     public String getErrorMessage(){
-        return wait.until(ExpectedConditions.visibilityOf(errorMsg)).getText();
+        return wait.waitForVisibility(errorMsg).getText();
     }
 
 }

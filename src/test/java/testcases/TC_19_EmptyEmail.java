@@ -18,7 +18,6 @@ public class TC_19_EmptyEmail extends BaseTest {
 
     @Test
     public void invalidEmail() throws InterruptedException, IOException {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         glp = new LoginPage(driver);
         ss = new ScreenshotUtils(driver);
         glp.goLogin();
@@ -27,7 +26,9 @@ public class TC_19_EmptyEmail extends BaseTest {
         glp.switchWindow();
         glp.enterEmailOrPhone("");
         glp.clickNext();
-        Assert.assertEquals(glp.getErrorMessage(), "Enter an email or phone number");
+        Assert.assertEquals(
+                glp.getErrorMessage(), "Enter an email or phone number"
+        );
         ss.screenShot("EmptyEmail");
         driver.switchTo().window(oldWindow);
     }

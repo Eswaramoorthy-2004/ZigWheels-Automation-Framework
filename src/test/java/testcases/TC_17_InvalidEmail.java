@@ -30,7 +30,9 @@ public class TC_17_InvalidEmail extends BaseTest {
         glp.switchWindow();
         glp.enterEmailOrPhone(property.getInValidEmail());
         glp.clickNext();
-        Assert.assertEquals(glp.getErrorMessage(),"Enter a valid email or phone number");
+        Assert.assertEquals(
+                glp.getErrorMessage(),"Enter a valid email or phone number"
+        );
         ss.screenShot("InvalidEmail");
         driver.switchTo().window(oldWindow);
     }

@@ -35,5 +35,10 @@ public class WaitUtil {
                 ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
+    public boolean waitForTextToBePresent( WebElement element , String str2){
+        return wait.until(ExpectedConditions.not(ExpectedConditions.textToBePresentInElement(element,str2)));
+    }
+
+
 
 }

@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import org.zigWheelsAutomation.pages.LoginPage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
 import org.zigWheelsAutomation.utilities.ScreenshotUtils;
+import org.zigWheelsAutomation.utilities.WaitUtil;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -18,13 +19,15 @@ public class TC_20_ValidEmail extends BaseTest {
     String oldWindow;
     PropertyReader property;
     ScreenshotUtils ss;
+    WaitUtil wait;
+    boolean Wait;
 
     @Test
     public void invalidEmail() throws InterruptedException, IOException {
         property = new PropertyReader();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         glp = new LoginPage(driver);
         ss = new ScreenshotUtils(driver);
+        wait = new WaitUtil(driver);
         glp.goLogin();
         oldWindow = driver.getWindowHandle();
         glp.clickGoogle();
@@ -32,9 +35,11 @@ public class TC_20_ValidEmail extends BaseTest {
         emailPageTitle=glp.pageTitle.getText();
         glp.enterEmailOrPhone(property.getValidEmail());
         glp.clickNext();
-        wait.until(ExpectedConditions.not(ExpectedConditions.textToBePresentInElement(glp.pageTitle,emailPageTitle)));
+        Wait = wait.waitForTextToBePresent(glp.pageTitle,emailPageTitle);
         Assert.assertNotEquals(
-                emailPageTitle,glp.pageTitle.getText(),"Password field should be displayed after entering valid email"
+                emailPageTitle,
+                glp.pageTitle.getText(),
+                "Password field should be displayed after entering valid email"
         );
         ss.screenShot("ValidEmail");
         driver.switchTo().window(oldWindow);
