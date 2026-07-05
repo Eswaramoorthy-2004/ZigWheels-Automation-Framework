@@ -61,7 +61,9 @@ public class PropertyReader {
         );
     }
 
-
+    public Double getThreshold(){
+        return Double.parseDouble(prop.getProperty("threshold"));
+    }
 
 
 }
