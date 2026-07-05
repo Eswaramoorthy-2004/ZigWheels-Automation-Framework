@@ -43,11 +43,11 @@ public class PropertyReader {
     public String getCity() {
         return prop.getProperty("city");
     }
-    public String getUsedcarpageurl(){
+    public String getUsedCarPageUrl(){
         return prop.getProperty("usedcarspage.url");
     }
 
-    public String getUsedcarPageTitle() {
+    public String getUsedCarPageTitle() {
         return prop.getProperty("usedcarpagetitle");
     }
 

@@ -4,7 +4,6 @@ import basetest.BaseTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.UpcomingBikesPage;
-import java.time.Duration;
 import java.util.List;
 
 public class TC_07_ExtractBikePrices extends BaseTest {

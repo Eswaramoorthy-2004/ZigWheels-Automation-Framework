@@ -1,13 +1,11 @@
 package org.zigWheelsAutomation.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 import java.util.List;
 
@@ -34,21 +32,13 @@ public class PopularModelsPage extends UsedCarsPage {
     WebElement popularModelsHeader;
 
     public void selectCity(String city) {
-
         cityInput.clear();
         cityInput.sendKeys(city);
-
-        String cityXpath = "//*[@id=\"popularCityList\"]/li[7]/a";
-
+        String cityXpath = "//*[@id='popularCityList']/li[7]/a";
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
         WebElement cityOption = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(By.xpath(cityXpath)));
-
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        //js.executeScript("arguments[0].scrollIntoView(true);", cityOption);
-        js.executeScript("arguments[0].click();", cityOption);
-
+        javaScriptUtil.clickElement(cityOption);
     }
 
     public int getModelCount() {

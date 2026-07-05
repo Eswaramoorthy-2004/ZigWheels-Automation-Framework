@@ -23,12 +23,12 @@ public class TC_11_NavigateUsedcars extends BaseTest {
         usedCarsPage.clickMore();
         usedCarsPage.clickUsedCars();
         String CurrentUrl = driver.getCurrentUrl();
-        String expectedUrl = propertyReader.getUsedcarpageurl();
+        String expectedUrl = propertyReader.getUsedCarPageUrl();
         softAssert.assertEquals(
                 CurrentUrl,expectedUrl,"The URL is Checked Successfully"
         );
         String actualTitle = driver.getTitle();
-        String expectedTitle = propertyReader.getUsedcarPageTitle();
+        String expectedTitle = propertyReader.getUsedCarPageTitle();
         softAssert.assertEquals(
                 actualTitle, expectedTitle, "Page title validation failed"
         );
