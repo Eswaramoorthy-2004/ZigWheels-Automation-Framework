@@ -41,7 +41,7 @@ public class LoginPage {
     @FindBy(id="identifierId")
     public WebElement emailInput;
 
-    @FindBy(xpath = "//div[@id='i8']")
+    @FindBy(xpath = "//div[contains(@class,'Ekjuhf')]")
     WebElement errorMsg;
 
     @FindBy(xpath = "//h1[@id='headingText']")
@@ -85,7 +85,7 @@ public class LoginPage {
     }
 
     public String getErrorMessage(){
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+
         return wait.until(ExpectedConditions.visibilityOf(errorMsg)).getText();
     }
 
