@@ -8,20 +8,23 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.zigWheelsAutomation.utilities.JavaScriptUtil;
+
 import javax.swing.*;
 import java.time.Duration;
 import java.util.Set;
 
 public class LoginPage {
     WebDriver driver;
-    public String oldWindowX;
+    public String oldWindow;
+    JavaScriptUtil js;
+    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 
     public LoginPage(WebDriver driver){
         this.driver=driver;
         PageFactory.initElements(driver,this);
+        js = new JavaScriptUtil(driver);
     }
-
-    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 
     @FindBy(id="des_lIcon")
     WebElement login;
@@ -49,9 +52,8 @@ public class LoginPage {
 
     public void goLogin(){
         wait.until(ExpectedConditions.elementToBeClickable(login));
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();",login);
-        oldWindowX = driver.getWindowHandle();
+        js.clickElement(login);
+        oldWindow = driver.getWindowHandle();
     }
     public void clickGoogle() throws InterruptedException {
         int retries = 3;
@@ -69,7 +71,7 @@ public class LoginPage {
     public void switchWindow(){
         Set<String> windowsIds = driver.getWindowHandles();
         for(String w : windowsIds){
-            if(!w.equals(oldWindowX)){
+            if(!w.equals(oldWindow)){
                 driver.switchTo().window(w);
                 break;
             }
@@ -85,7 +87,6 @@ public class LoginPage {
     }
 
     public String getErrorMessage(){
-
         return wait.until(ExpectedConditions.visibilityOf(errorMsg)).getText();
     }
 

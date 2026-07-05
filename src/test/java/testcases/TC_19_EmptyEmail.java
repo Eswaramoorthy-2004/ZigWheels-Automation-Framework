@@ -6,23 +6,29 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.zigWheelsAutomation.pages.LoginPage;
+import org.zigWheelsAutomation.utilities.ScreenshotUtils;
+
+import java.io.IOException;
 import java.time.Duration;
 
 public class TC_19_EmptyEmail extends BaseTest {
     LoginPage glp;
+    String oldWindow;
+    ScreenshotUtils ss;
 
     @Test
-    public void invalidEmail() throws InterruptedException {
+    public void invalidEmail() throws InterruptedException, IOException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         glp = new LoginPage(driver);
+        ss = new ScreenshotUtils(driver);
         glp.goLogin();
-        String oldWindow = driver.getWindowHandle();
+        oldWindow = driver.getWindowHandle();
         glp.clickGoogle();
-        wait.until(ExpectedConditions.numberOfWindowsToBe(2));
         glp.switchWindow();
         glp.enterEmailOrPhone("");
         glp.clickNext();
         Assert.assertEquals(glp.getErrorMessage(), "Enter an email or phone number");
+        ss.screenShot("EmptyEmail");
         driver.switchTo().window(oldWindow);
     }
 }
