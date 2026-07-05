@@ -17,7 +17,7 @@ public class TC_08_FilterBikesBelow5Lakh extends BaseTest {
     @Test
     public void testFilterBikesBelow5Lakh() {
         upcomingBikesPage = new UpcomingBikesPage(driver);
-        softAssert = new SoftAssert();
+        SoftAssert softAssert = new SoftAssert();
         upcomingBikesPage.hoverNewBikes();
         upcomingBikesPage.clickUpcomingBikes();
         upcomingBikesPage.clickHondaButton();
