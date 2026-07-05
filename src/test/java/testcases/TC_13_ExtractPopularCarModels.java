@@ -1,18 +1,19 @@
 package testcases;
 
 import basetest.BaseTest;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.PopularModelsPage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
-
+import org.zigWheelsAutomation.utilities.WaitUtil;
 import java.io.IOException;
-import java.time.Duration;
+
 
 public class TC_13_ExtractPopularCarModels extends BaseTest {
 
+    private static final Logger log = LoggerFactory.getLogger(TC_13_ExtractPopularCarModels.class);
     PopularModelsPage popularModelsPage;
     PropertyReader propertyReader;
     SoftAssert softAssert;
@@ -26,10 +27,6 @@ public class TC_13_ExtractPopularCarModels extends BaseTest {
         popularModelsPage.clickMore();
         popularModelsPage.clickUsedCars();
         popularModelsPage.selectCity(propertyReader.getCity());
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(driver -> popularModelsPage.getModelCount() > 0);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,500)");
         boolean expectedStatus = propertyReader.getBrandAndModelStatus();
         boolean actualStatus = popularModelsPage.isBrandAndModelExpanded();
         softAssert.assertEquals(
@@ -42,6 +39,6 @@ public class TC_13_ExtractPopularCarModels extends BaseTest {
                 "Popular Models section is not displayed"
         );
         softAssert.assertAll();
-        //System.out.println("Popular car models extracted successfully");
+        log.info("Popular car models extracted successfully");
     }
 }

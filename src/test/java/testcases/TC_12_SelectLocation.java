@@ -1,15 +1,17 @@
 package testcases;
 
 import basetest.BaseTest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.PopularModelsPage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
-
 import java.io.IOException;
 
 public class TC_12_SelectLocation extends BaseTest {
 
+    private static final Logger log = LoggerFactory.getLogger(TC_12_SelectLocation.class);
     PropertyReader propertyReader;
     PopularModelsPage popularModelsPage;
     SoftAssert softAssert;
@@ -36,6 +38,6 @@ public class TC_12_SelectLocation extends BaseTest {
                 "City field is empty"
         );
         softAssert.assertAll();
-        //System.out.println(expectedCity + " location selected successfully");
+        log.info("{} location selected successfully",expectedCity);
     }
 }

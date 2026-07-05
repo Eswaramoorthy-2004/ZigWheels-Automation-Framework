@@ -19,7 +19,6 @@ public class TC_08_FilterBikesBelow5Lakh extends BaseTest {
         upcomingBikesPage.hoverNewBikes();
         upcomingBikesPage.clickUpcomingBikes();
         upcomingBikesPage.clickHondaButton();
-        //driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         double threshold = 5.0;
         List<String> belowThresholdPrices = upcomingBikesPage.getPricesBelow(threshold);
         Map<String, String> bikesBelowThreshold = upcomingBikesPage.getBikesBelow(threshold);

@@ -18,7 +18,6 @@ public class TC_07_ExtractBikePrices extends BaseTest {
         upcomingBikesPage.hoverNewBikes();
         upcomingBikesPage.clickUpcomingBikes();
         upcomingBikesPage.clickHondaButton();
-        //driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         List<String> prices = upcomingBikesPage.getBikePrices();
         softAssert.assertNotNull(
                 prices, "Bike prices list should not be null"
