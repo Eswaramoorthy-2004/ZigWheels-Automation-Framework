@@ -14,8 +14,7 @@ public class UpcomingHondaBikesPage extends HomePage{
     WebElement hondaButton;
 
     public void clickHondaButton(){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", hondaButton);
-        js.executeScript("arguments[0].click();", hondaButton);
+        javaScriptUtil.scrollIntoView(hondaButton);
+        javaScriptUtil.clickElement(hondaButton);
     }
 }

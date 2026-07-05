@@ -1,8 +1,8 @@
 package testcases;
 
 import basetest.BaseTest;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.HomePage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
 
@@ -12,20 +12,23 @@ public class TC_02_NavigateToUpcomingBikes extends BaseTest {
 
     PropertyReader propertyReader;
     HomePage homePage;
+    SoftAssert softAssert;
 
     @Test
     public void testUpcomingBikesPage() throws IOException {
         propertyReader = new PropertyReader();
         homePage = new HomePage(driver);
+        softAssert = new SoftAssert();
         homePage.hoverNewBikes();
         homePage.clickUpcomingBikes();
         String expectedURL = propertyReader.getUpcomingBikesURL();
-        Assert.assertEquals(
+        softAssert.assertEquals(
                 driver.getCurrentUrl(),expectedURL
         );
         String expectedTitle = propertyReader.getUpcomingBikesPageTitle();
-        Assert.assertEquals(
+        softAssert.assertEquals(
                 driver.getTitle(),expectedTitle
         );
+        softAssert.assertAll();
     }
 }
