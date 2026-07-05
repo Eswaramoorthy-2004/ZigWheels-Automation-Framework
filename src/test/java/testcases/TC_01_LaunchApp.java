@@ -35,6 +35,7 @@ public class TC_01_LaunchApp extends BaseTest {
         );
         softAssert.assertAll();
         log.info("Application launched successfully");
+        log.info("I'm done");
     }
 
 }
