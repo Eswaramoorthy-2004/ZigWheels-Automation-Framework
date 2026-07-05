@@ -4,7 +4,6 @@ import basetest.BaseTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.UpcomingBikesPage;
-import java.time.Duration;
 import java.util.List;
 
 public class TC_06_ExtractBikeNames extends BaseTest {
@@ -19,7 +18,6 @@ public class TC_06_ExtractBikeNames extends BaseTest {
         upcomingBikesPage.hoverNewBikes();
         upcomingBikesPage.clickUpcomingBikes();
         upcomingBikesPage.clickHondaButton();
-        //driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         List<String> names = upcomingBikesPage.getBikeNames();
         softAssert.assertNotNull(
                 names, "Bike names list should not be null"
