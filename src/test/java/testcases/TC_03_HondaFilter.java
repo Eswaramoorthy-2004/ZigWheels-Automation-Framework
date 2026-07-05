@@ -1,6 +1,8 @@
 package testcases;
 
 import basetest.BaseTest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.UpcomingHondaBikesPage;
@@ -10,6 +12,7 @@ import java.io.IOException;
 
 public class TC_03_HondaFilter extends BaseTest {
 
+    private static final Logger log = LoggerFactory.getLogger(TC_03_HondaFilter.class);
     UpcomingHondaBikesPage upcomingHondaBikesPage;
     PropertyReader propertyReader;
     SoftAssert softAssert;
@@ -31,5 +34,6 @@ public class TC_03_HondaFilter extends BaseTest {
                 driver.getTitle(),expectedTitle
         );
         softAssert.assertAll();
+        log.info("Honda filter applied successfully");
     }
 }
