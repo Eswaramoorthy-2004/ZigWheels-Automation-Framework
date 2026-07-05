@@ -3,8 +3,8 @@ package testcases;
 import basetest.BaseTest;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.PopularModelsPage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
 
@@ -15,12 +15,14 @@ public class TC_13_ExtractPopularCarModels extends BaseTest {
 
     PopularModelsPage popularModelsPage;
     PropertyReader propertyReader;
+    SoftAssert softAssert;
 
     @Test
     public void extractPopularCarModels() throws IOException {
 
         propertyReader = new PropertyReader();
         popularModelsPage = new PopularModelsPage(driver);
+        softAssert = new SoftAssert();
         popularModelsPage.clickMore();
         popularModelsPage.clickUsedCars();
         popularModelsPage.selectCity(propertyReader.getCity());
@@ -30,18 +32,16 @@ public class TC_13_ExtractPopularCarModels extends BaseTest {
         js.executeScript("window.scrollBy(0,500)");
         boolean expectedStatus = propertyReader.getBrandAndModelStatus();
         boolean actualStatus = popularModelsPage.isBrandAndModelExpanded();
-
-        Assert.assertEquals(
+        softAssert.assertEquals(
                 actualStatus,
                 expectedStatus,
                 "Brand and Model section is not expanded"
         );
-
-        Assert.assertTrue(
+        softAssert.assertTrue(
                 popularModelsPage.isPopularModelsDisplayed(),
                 "Popular Models section is not displayed"
         );
-
+        softAssert.assertAll();
         //System.out.println("Popular car models extracted successfully");
     }
 }

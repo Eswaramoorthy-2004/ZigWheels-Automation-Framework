@@ -1,34 +1,38 @@
 package testcases;
 
 import basetest.BaseTest;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.UpcomingBikesPage;
 import java.time.Duration;
 import java.util.List;
 
 public class TC_07_ExtractBikePrices extends BaseTest {
+
     UpcomingBikesPage upcomingBikesPage;
+    SoftAssert softAssert;
 
     @Test
     public void testBikePrices(){
         upcomingBikesPage = new UpcomingBikesPage(driver);
+        softAssert = new SoftAssert();
         upcomingBikesPage.hoverNewBikes();
         upcomingBikesPage.clickUpcomingBikes();
         upcomingBikesPage.clickHondaButton();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        //driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         List<String> prices = upcomingBikesPage.getBikePrices();
-        Assert.assertNotNull(
+        softAssert.assertNotNull(
                 prices, "Bike prices list should not be null"
         );
-        Assert.assertFalse(
+        softAssert.assertFalse(
                 prices.isEmpty(), "Bike prices list should not be empty"
         );
         for (String price : prices) {
-            Assert.assertTrue(
+            softAssert.assertTrue(
                     price.toLowerCase().startsWith("rs"),
                     "Invalid price format found: " + price
             );
         }
+        softAssert.assertAll();
     }
 }

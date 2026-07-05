@@ -10,13 +10,13 @@ import java.time.Duration;
 
 public class BaseTest {
     public WebDriver driver;
-    PropertyReader p;
+    PropertyReader propertyReader;
 
     @BeforeClass
     public void setup() throws IOException {
         driver = new ChromeDriver();
-        p = new PropertyReader();
-        driver.get(p.getPageURL());
+        propertyReader = new PropertyReader();
+        driver.get(propertyReader.getPageURL());
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));

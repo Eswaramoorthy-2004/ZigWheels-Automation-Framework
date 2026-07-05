@@ -1,8 +1,8 @@
 package testcases;
 
 import basetest.BaseTest;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.HomePage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
 
@@ -12,23 +12,25 @@ public class TC_01_LaunchApp extends BaseTest {
 
     PropertyReader propertyReader;
     HomePage homePage;
+    SoftAssert softAssert;
 
     @Test
     public void verifyAppLaunch() throws IOException {
         homePage = new HomePage(driver);
         propertyReader = new PropertyReader();
+        softAssert = new SoftAssert();
         String expectedTitle = propertyReader.getPageTitle();
-        Assert.assertEquals(
+        softAssert.assertEquals(
                 driver.getTitle(), expectedTitle
         );
         String expectedURL = propertyReader.getPageURL();
-        Assert.assertEquals(
+        softAssert.assertEquals(
                 driver.getCurrentUrl(),expectedURL,"The Application Launched Successfully"
         );
-
-        Assert.assertTrue(
+        softAssert.assertTrue(
                 homePage.checkLogoIsDisplayed(),"Logo is displayed"
         );
+        softAssert.assertAll();
     }
 
 }
