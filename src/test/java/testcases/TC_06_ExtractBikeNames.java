@@ -5,24 +5,24 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import org.zigWheelsAutomation.pages.UpcomingBikesPage;
+import org.zigWheelsAutomation.pages.UpcomingHondaBikesPage;
+
 import java.util.List;
 
 public class TC_06_ExtractBikeNames extends BaseTest {
 
     private static final Logger log = LogManager.getLogger(TC_06_ExtractBikeNames.class);
-
-    UpcomingBikesPage upcomingBikesPage;
+    UpcomingHondaBikesPage upcomingHondaBikesPage;
     SoftAssert softAssert;
 
     @Test
     public void testBikeName(){
-        upcomingBikesPage = new UpcomingBikesPage(driver);
+        upcomingHondaBikesPage = new UpcomingHondaBikesPage(driver);
         softAssert = new SoftAssert();
-        upcomingBikesPage.hoverNewBikes();
-        upcomingBikesPage.clickUpcomingBikes();
-        upcomingBikesPage.clickHondaButton();
-        List<String> names = upcomingBikesPage.getBikeNames();
+        upcomingHondaBikesPage.hoverNewBikes();
+        upcomingHondaBikesPage.clickUpcomingBikes();
+        upcomingHondaBikesPage.clickHondaButton();
+        List<String> names = upcomingHondaBikesPage.getBikeNames();
         softAssert.assertNotNull(
                 names, "Bike names list should not be null"
         );
@@ -33,6 +33,6 @@ public class TC_06_ExtractBikeNames extends BaseTest {
                 names.size() > 0, "At least one bike name should be captured"
         );
         softAssert.assertAll();
-        log.info("Bike Names Extracted Succesfully");
+        log.info("Bike Names Extracted Successfully");
     }
 }

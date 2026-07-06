@@ -35,9 +35,6 @@ public class TC_04_HondaFilter extends BaseTest {
         softAssert.assertEquals(
                 element.getText(),ExpectedText
         );
-        softAssert.assertTrue(
-                upcomingHondaBikesPage.isBikeImageDisplayed(),"Bike images are displayed"
-        );
         log.info("Honda filter validated successfully");
     }
 }

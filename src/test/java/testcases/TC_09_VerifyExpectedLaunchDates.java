@@ -5,27 +5,25 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import org.zigWheelsAutomation.pages.UpcomingBikesPage;
+import org.zigWheelsAutomation.pages.UpcomingHondaBikesPage;
 
 import java.util.List;
 
 public class TC_09_VerifyExpectedLaunchDates extends BaseTest {
 
     private static final Logger log = LogManager.getLogger(TC_09_VerifyExpectedLaunchDates.class);
-
-    UpcomingBikesPage upcomingBikesPage;
+    UpcomingHondaBikesPage upcomingHondaBikesPage;
     SoftAssert softAssert;
 
     @Test
     public void testExpectedLaunchDates() {
-        upcomingBikesPage = new UpcomingBikesPage(driver);
+        upcomingHondaBikesPage = new UpcomingHondaBikesPage(driver);
         softAssert = new SoftAssert();
+        upcomingHondaBikesPage.hoverNewBikes();
+        upcomingHondaBikesPage.clickUpcomingBikes();
+        upcomingHondaBikesPage.clickHondaButton();
 
-        upcomingBikesPage.hoverNewBikes();
-        upcomingBikesPage.clickUpcomingBikes();
-        upcomingBikesPage.clickHondaButton();
-
-        List<String> launchDates = upcomingBikesPage.getExpectedLaunchDates();
+        List<String> launchDates = upcomingHondaBikesPage.getExpectedLaunchDates();
 
         softAssert.assertNotNull(
                 launchDates, "Launch dates list should not be null"
