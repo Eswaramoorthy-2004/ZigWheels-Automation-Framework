@@ -5,9 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
+
 import java.util.*;
 
 public class UpcomingBikesPage extends  UpcomingHondaBikesPage{
@@ -109,35 +107,5 @@ public class UpcomingBikesPage extends  UpcomingHondaBikesPage{
         return dates;
     }
 
-    public List<String> getLaunchDatesOnly() {
-        List<String> dates = new ArrayList<>();
-        for (String fullText : getExpectedLaunchDates()) {
-            if (fullText.contains(":")) {
-                dates.add(fullText.split(":", 2)[1].trim());
-            }
-        }
-        return dates;
-    }
 
-    public Map<String, String> getBikesWithLaunchDates() {
-        Map<String, String> result = new LinkedHashMap<>();
-        List<String> names = getBikeNames();
-        List<String> dates = getExpectedLaunchDates();
-
-        int size = Math.min(names.size(), dates.size());
-        for (int i = 0; i < size; i++) {
-            result.put(names.get(i), dates.get(i));
-        }
-        return result;
-    }
-
-    public LocalDate parseLaunchDate(String dateText) {
-        try {
-            String cleaned = dateText.replaceAll("(?i)expected launch\\s*:\\s*", "").trim();
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, yyyy", Locale.ENGLISH);
-            return LocalDate.parse(cleaned, formatter);
-        } catch (DateTimeParseException e) {
-            return null;
-        }
-    }
 }
