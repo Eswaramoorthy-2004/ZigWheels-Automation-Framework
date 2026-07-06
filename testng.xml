@@ -12,6 +12,8 @@
             </class>
             <class name="testcases.TC_04_HondaFilter">
             </class>
+            <class name="testcases.TC_05_ValidateCarCard">
+            </class>
             <class name="testcases.TC_06_ExtractBikeNames">
             </class>
             <class name="testcases.TC_07_ExtractBikePrices">
