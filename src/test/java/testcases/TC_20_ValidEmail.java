@@ -43,5 +43,6 @@ public class TC_20_ValidEmail extends BaseTest {
         ss.screenShot("ValidEmail");
         driver.switchTo().window(oldWindow);
         log.info("Valid Email is accepted");
+        log.info("Screenshot captured successfully: ValidEmail.png");
     }
 }
