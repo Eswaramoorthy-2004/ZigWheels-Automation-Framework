@@ -3,16 +3,19 @@ package testcases;
 import basetest.BaseTest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.zigWheelsAutomation.pages.LoginPage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
 import org.zigWheelsAutomation.utilities.ScreenshotUtils;
 import org.zigWheelsAutomation.utilities.WaitUtil;
+
 import java.io.IOException;
+import java.time.Duration;
 
 public class TC_20_ValidEmail extends BaseTest {
-    private static final Logger log = LogManager.getLogger(TC_20_ValidEmail.class);
     LoginPage glp;
     String emailPageTitle;
     String oldWindow;
@@ -20,7 +23,7 @@ public class TC_20_ValidEmail extends BaseTest {
     ScreenshotUtils ss;
     WaitUtil wait;
     boolean Wait;
-
+    private static final Logger log = LogManager.getLogger(TC_20_ValidEmail.class);
     @Test
     public void invalidEmail() throws InterruptedException, IOException {
         property = new PropertyReader();
