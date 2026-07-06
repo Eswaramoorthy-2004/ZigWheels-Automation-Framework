@@ -1,6 +1,8 @@
 package testcases;
 
 import basetest.BaseTest;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -17,6 +19,7 @@ public class TC_18_InvalidPhoneNumber extends BaseTest{
     PropertyReader property;
     String oldWindow;
     ScreenshotUtils ss;
+    private static final Logger log = LogManager.getLogger(TC_18_InvalidPhoneNumber.class);
 
     @Test
     public void invalidEmail() throws InterruptedException, IOException {
@@ -34,5 +37,6 @@ public class TC_18_InvalidPhoneNumber extends BaseTest{
         );
         ss.screenShot("InvalidPhoneNumber");
         driver.switchTo().window(oldWindow);
+        log.info("Invalid phone number");
     }
 }

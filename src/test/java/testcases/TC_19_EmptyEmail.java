@@ -1,6 +1,8 @@
 package testcases;
 
 import basetest.BaseTest;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -15,7 +17,7 @@ public class TC_19_EmptyEmail extends BaseTest {
     LoginPage glp;
     String oldWindow;
     ScreenshotUtils ss;
-
+    private static final Logger log = LogManager.getLogger(TC_19_EmptyEmail.class);
     @Test
     public void invalidEmail() throws InterruptedException, IOException {
         glp = new LoginPage(driver);
@@ -31,5 +33,6 @@ public class TC_19_EmptyEmail extends BaseTest {
         );
         ss.screenShot("EmptyEmail");
         driver.switchTo().window(oldWindow);
+        log.info("Empty email login not successful");
     }
 }

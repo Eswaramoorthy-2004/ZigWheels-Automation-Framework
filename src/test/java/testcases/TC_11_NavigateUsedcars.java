@@ -1,7 +1,8 @@
 package testcases;
 
 import basetest.BaseTest;
-import org.slf4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -11,7 +12,7 @@ import java.io.IOException;
 
 public class TC_11_NavigateUsedcars extends BaseTest {
 
-    private static final Logger log = LoggerFactory.getLogger(TC_11_NavigateUsedcars.class);
+    private static final Logger log = LogManager.getLogger(TC_11_NavigateUsedcars.class);
     UsedCarsPage usedCarsPage;
     PropertyReader propertyReader;
     SoftAssert softAssert;

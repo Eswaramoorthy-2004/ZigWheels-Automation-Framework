@@ -1,6 +1,8 @@
 package testcases;
 
 import basetest.BaseTest;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -21,7 +23,7 @@ public class TC_20_ValidEmail extends BaseTest {
     ScreenshotUtils ss;
     WaitUtil wait;
     boolean Wait;
-
+    private static final Logger log = LogManager.getLogger(TC_20_ValidEmail.class);
     @Test
     public void invalidEmail() throws InterruptedException, IOException {
         property = new PropertyReader();
@@ -43,5 +45,6 @@ public class TC_20_ValidEmail extends BaseTest {
         );
         ss.screenShot("ValidEmail");
         driver.switchTo().window(oldWindow);
+        log.info("The valid email works");
     }
 }

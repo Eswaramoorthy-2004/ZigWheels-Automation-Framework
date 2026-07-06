@@ -1,8 +1,8 @@
 package testcases;
 
 import basetest.BaseTest;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.UpcomingHondaBikesPage;
@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class TC_03_HondaPage extends BaseTest {
 
-    private static final Logger log = LoggerFactory.getLogger(TC_03_HondaPage.class);
+    private static final Logger log = LogManager.getLogger(TC_03_HondaPage.class);
     UpcomingHondaBikesPage upcomingHondaBikesPage;
     PropertyReader propertyReader;
     SoftAssert softAssert;
