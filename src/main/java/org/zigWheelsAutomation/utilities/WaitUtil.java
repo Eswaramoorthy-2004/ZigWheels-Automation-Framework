@@ -25,11 +25,6 @@ public class WaitUtil {
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    public boolean waitForNumberOfWindowsToBe(int expectedWindowCount) {
-        return wait.until(
-                ExpectedConditions.numberOfWindowsToBe(expectedWindowCount));
-    }
-
     public WebElement waitForVisibilityOfElementLocated(By locator) {
         return wait.until(
                 ExpectedConditions.visibilityOfElementLocated(locator));

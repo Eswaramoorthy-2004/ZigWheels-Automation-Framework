@@ -64,7 +64,9 @@ public class LoginPage {
                 new WebDriverWait(driver, Duration.ofSeconds(3))
                         .until(ExpectedConditions.numberOfWindowsToBe(2));
                 break;
-            } catch (TimeoutException e) {
+            }
+            catch (TimeoutException ignored) {
+                //retry the click
             }
         }
     }
