@@ -38,6 +38,16 @@ public class PropertyReader {
     public String getValidPhoneNumber(){
         return prop.getProperty("invalidPhoneNumber");
     }
+    public String getExpectedMsgInvalidEmail(){
+        return prop.getProperty("expectedMsgInvalidEmail");
+    }
+    public String getExpectedMsgInvalidPhone(){
+        return prop.getProperty("expectedMsgInvalidPhone");
+    }
+    public String getExpectedMsgEmptyEmail(){
+        return prop.getProperty("expectedMsgEmptyEmail");
+    }
+
     public String getCity() {
         return prop.getProperty("city");
     }
