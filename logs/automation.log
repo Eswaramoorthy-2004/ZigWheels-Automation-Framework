@@ -12,3 +12,32 @@
 2026-07-06 15:01:47 INFO  testcases.TC_19_EmptyEmail - Screenshot captured successfully: EmptyEmail.png
 2026-07-06 15:02:09 INFO  testcases.TC_20_ValidEmail - Valid Email is accepted
 2026-07-06 15:02:09 INFO  testcases.TC_20_ValidEmail - Screenshot captured successfully: ValidEmail.png
+2026-07-06 15:06:20 INFO  testcases.TC_01_LaunchApp - Application launched successfully
+2026-07-06 15:06:33 INFO  testcases.TC_02_NavigateToUpcomingBikes - Navigated to upcoming bikes successfully
+2026-07-06 15:07:15 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Succesfully
+2026-07-06 15:07:28 INFO  testcases.TC_07_ExtractBikePrices - Bike price filter is working
+2026-07-06 15:07:45 INFO  testcases.TC_08_FilterBikesBelow5Lakh - Below 5 lakh filter is working
+2026-07-06 15:08:00 INFO  testcases.TC_09_VerifyExpectedLaunchDates - Expected Launch Dates Verified Successfully
+2026-07-06 15:09:19 INFO  testcases.TC_16_ValidateLoginOptions - Login with Google, Facebook, Apple are available
+2026-07-06 15:09:19 INFO  testcases.TC_16_ValidateLoginOptions - Screenshot captured successfully: LoginOption.png
+2026-07-06 15:09:40 INFO  testcases.TC_17_InvalidEmail - Invalid Email is not accepted
+2026-07-06 15:09:40 INFO  testcases.TC_17_InvalidEmail - Screenshot captured successfully: InvalidEmail.png
+2026-07-06 15:10:01 INFO  testcases.TC_18_InvalidPhoneNumber - Invalid phone number is not accepted
+2026-07-06 15:10:01 INFO  testcases.TC_18_InvalidPhoneNumber - Screenshot captured successfully: InvalidPhoneNumber.png
+2026-07-06 15:10:19 INFO  testcases.TC_19_EmptyEmail - Empty Email is not accepted
+2026-07-06 15:10:19 INFO  testcases.TC_19_EmptyEmail - Screenshot captured successfully: EmptyEmail.png
+2026-07-06 15:10:37 INFO  testcases.TC_20_ValidEmail - Valid Email is accepted
+2026-07-06 15:10:37 INFO  testcases.TC_20_ValidEmail - Screenshot captured successfully: ValidEmail.png
+2026-07-06 15:25:45 INFO  testcases.TC_17_InvalidEmail - Invalid Email is not accepted
+2026-07-06 15:25:45 INFO  testcases.TC_17_InvalidEmail - Screenshot captured successfully: InvalidEmail.png
+2026-07-06 15:26:14 INFO  testcases.TC_01_LaunchApp - Application launched successfully
+2026-07-06 15:26:34 INFO  testcases.TC_16_ValidateLoginOptions - Login with Google, Facebook, Apple are available
+2026-07-06 15:26:34 INFO  testcases.TC_16_ValidateLoginOptions - Screenshot captured successfully: LoginOption.png
+2026-07-06 15:26:50 INFO  testcases.TC_17_InvalidEmail - Invalid Email is not accepted
+2026-07-06 15:26:50 INFO  testcases.TC_17_InvalidEmail - Screenshot captured successfully: InvalidEmail.png
+2026-07-06 15:27:07 INFO  testcases.TC_18_InvalidPhoneNumber - Invalid phone number is not accepted
+2026-07-06 15:27:07 INFO  testcases.TC_18_InvalidPhoneNumber - Screenshot captured successfully: InvalidPhoneNumber.png
+2026-07-06 15:27:24 INFO  testcases.TC_19_EmptyEmail - Empty Email is not accepted
+2026-07-06 15:27:24 INFO  testcases.TC_19_EmptyEmail - Screenshot captured successfully: EmptyEmail.png
+2026-07-06 15:27:42 INFO  testcases.TC_20_ValidEmail - Valid Email is accepted
+2026-07-06 15:27:42 INFO  testcases.TC_20_ValidEmail - Screenshot captured successfully: ValidEmail.png
