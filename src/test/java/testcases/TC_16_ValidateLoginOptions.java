@@ -33,5 +33,6 @@ public class TC_16_ValidateLoginOptions extends BaseTest {
         asserts.assertAll();
         ss.screenShot("LoginOptions");
         log.info("Login with Google, Facebook, Apple are available");
+        log.info("Screenshot captured successfully: LoginOption.png");
     }
 }

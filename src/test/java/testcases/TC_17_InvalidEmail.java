@@ -34,5 +34,6 @@ public class TC_17_InvalidEmail extends BaseTest {
         ss.screenShot("InvalidEmail");
         driver.switchTo().window(oldWindow);
         log.info("Invalid Email is not accepted");
+        log.info("Screenshot captured successfully: InvalidEmail.png");
     }
 }

@@ -2,3 +2,13 @@
 2026-07-06 10:50:43 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Succesfully
 2026-07-06 10:51:00 INFO  testcases.TC_07_ExtractBikePrices - Bike price filter is working
 2026-07-06 10:51:17 INFO  testcases.TC_08_FilterBikesBelow5Lakh - Below 5 lakh filter is working
+2026-07-06 15:00:22 INFO  testcases.TC_16_ValidateLoginOptions - Login with Google, Facebook, Apple are available
+2026-07-06 15:00:22 INFO  testcases.TC_16_ValidateLoginOptions - Screenshot captured successfully: LoginOption.png
+2026-07-06 15:00:42 INFO  testcases.TC_17_InvalidEmail - Invalid Email is not accepted
+2026-07-06 15:00:42 INFO  testcases.TC_17_InvalidEmail - Screenshot captured successfully: InvalidEmail.png
+2026-07-06 15:00:59 INFO  testcases.TC_18_InvalidPhoneNumber - Invalid phone number is not accepted
+2026-07-06 15:00:59 INFO  testcases.TC_18_InvalidPhoneNumber - Screenshot captured successfully: InvalidPhoneNumber.png
+2026-07-06 15:01:47 INFO  testcases.TC_19_EmptyEmail - Empty Email is not accepted
+2026-07-06 15:01:47 INFO  testcases.TC_19_EmptyEmail - Screenshot captured successfully: EmptyEmail.png
+2026-07-06 15:02:09 INFO  testcases.TC_20_ValidEmail - Valid Email is accepted
+2026-07-06 15:02:09 INFO  testcases.TC_20_ValidEmail - Screenshot captured successfully: ValidEmail.png

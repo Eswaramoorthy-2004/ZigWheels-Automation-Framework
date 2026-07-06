@@ -31,5 +31,6 @@ public class TC_19_EmptyEmail extends BaseTest {
         ss.screenShot("EmptyEmail");
         driver.switchTo().window(oldWindow);
         log.info("Empty Email is not accepted");
+        log.info("Screenshot captured successfully: EmptyEmail.png");
     }
 }

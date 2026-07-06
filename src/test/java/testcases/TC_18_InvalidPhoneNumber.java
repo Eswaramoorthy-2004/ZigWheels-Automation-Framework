@@ -34,5 +34,6 @@ public class TC_18_InvalidPhoneNumber extends BaseTest{
         ss.screenShot("InvalidPhoneNumber");
         driver.switchTo().window(oldWindow);
         log.info("Invalid phone number is not accepted");
+        log.info("Screenshot captured successfully: InvalidPhoneNumber.png");
     }
 }
