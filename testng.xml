@@ -18,6 +18,8 @@
             </class>
             <class name="testcases.TC_08_FilterBikesBelow5Lakh">
             </class>
+            <class name="testcases.TC_09_VerifyExpectedLaunchDates">
+            </class>
             <class name="testcases.TC_11_NavigateUsedcars">
             </class>
             <class name="testcases.TC_12_SelectLocation">
