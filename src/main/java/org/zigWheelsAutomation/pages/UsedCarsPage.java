@@ -16,10 +16,10 @@ public class UsedCarsPage {
         javaScriptUtil = new JavaScriptUtil(driver);
     }
 
-    @FindBy(xpath = "//*[@id='headerNewVNavWrap']/nav/ul/li[5]/span")
+    @FindBy(xpath = "//*[@id='headerNewVNavWrap']")
     WebElement moreMenu;
 
-    @FindBy(xpath = "//*[@id=\"headerNewVNavWrap\"]/nav/ul/li[5]/ul/li[2]/a")
+    @FindBy(xpath = "//*[@id=\"headerNewVNavWrap\"]")
     WebElement usedCarsOption;
 
     public void clickMore() {
