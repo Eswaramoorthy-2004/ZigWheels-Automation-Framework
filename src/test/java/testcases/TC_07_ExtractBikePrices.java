@@ -5,24 +5,25 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import org.zigWheelsAutomation.pages.UpcomingBikesPage;
+import org.zigWheelsAutomation.pages.UpcomingHondaBikesPage;
+
 import java.util.List;
 
 public class TC_07_ExtractBikePrices extends BaseTest {
 
     private static final Logger log = LogManager.getLogger(TC_07_ExtractBikePrices.class);
 
-    UpcomingBikesPage upcomingBikesPage;
+    UpcomingHondaBikesPage upcomingHondaBikesPage;
     SoftAssert softAssert;
 
     @Test
     public void testBikePrices(){
-        upcomingBikesPage = new UpcomingBikesPage(driver);
+        upcomingHondaBikesPage = new UpcomingHondaBikesPage(driver);
         softAssert = new SoftAssert();
-        upcomingBikesPage.hoverNewBikes();
-        upcomingBikesPage.clickUpcomingBikes();
-        upcomingBikesPage.clickHondaButton();
-        List<String> prices = upcomingBikesPage.getBikePrices();
+        upcomingHondaBikesPage.hoverNewBikes();
+        upcomingHondaBikesPage.clickUpcomingBikes();
+        upcomingHondaBikesPage.clickHondaButton();
+        List<String> prices = upcomingHondaBikesPage.getBikePrices();
         softAssert.assertNotNull(
                 prices, "Bike prices list should not be null"
         );

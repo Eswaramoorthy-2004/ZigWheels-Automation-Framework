@@ -2,3 +2,11 @@
 2026-07-06 10:50:43 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Succesfully
 2026-07-06 10:51:00 INFO  testcases.TC_07_ExtractBikePrices - Bike price filter is working
 2026-07-06 10:51:17 INFO  testcases.TC_08_FilterBikesBelow5Lakh - Below 5 lakh filter is working
+2026-07-06 14:58:33 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Successfully
+2026-07-06 15:05:45 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Successfully
+2026-07-06 15:06:59 INFO  testcases.TC_07_ExtractBikePrices - Bike price filter is working
+2026-07-06 15:09:01 INFO  testcases.TC_08_FilterBikesBelow5Lakh - Below 5 lakh filter is working
+2026-07-06 15:10:17 INFO  testcases.TC_09_VerifyExpectedLaunchDates - Expected Launch Dates Verified Successfully
+2026-07-06 15:23:09 INFO  testcases.TC_05_ValidateCarCard - Bike Images are Displayed
+2026-07-06 15:23:09 INFO  testcases.TC_05_ValidateCarCard - Bike Names are Displayed
+2026-07-06 15:23:10 INFO  testcases.TC_05_ValidateCarCard - Bike Price are Displayed
