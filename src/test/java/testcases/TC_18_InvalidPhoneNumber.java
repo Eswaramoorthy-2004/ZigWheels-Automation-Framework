@@ -33,7 +33,7 @@ public class TC_18_InvalidPhoneNumber extends BaseTest{
         glp.enterEmailOrPhone(property.getValidPhoneNumber());
         glp.clickNext();
         Assert.assertEquals(
-                glp.getErrorMessage(),"Enter a valid email or phone number"
+                glp.getErrorMessage(), property.getExpectedMsgInvalidPhone()
         );
         ss.screenShot("InvalidPhoneNumber");
         driver.switchTo().window(oldWindow);
