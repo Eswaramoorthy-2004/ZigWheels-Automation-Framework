@@ -10,6 +10,8 @@
             </class>
             <class name="testcases.TC_03_HondaPage">
             </class>
+            <class name="testcases.TC_04_HondaFilter">
+            </class>
             <class name="testcases.TC_06_ExtractBikeNames">
             </class>
             <class name="testcases.TC_07_ExtractBikePrices">
