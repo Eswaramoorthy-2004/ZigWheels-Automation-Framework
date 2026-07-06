@@ -8,7 +8,7 @@
             </class>
             <class name="testcases.TC_02_NavigateToUpcomingBikes">
             </class>
-            <class name="testcases.TC_03_HondaFilter">
+            <class name="testcases.TC_03_HondaPage">
             </class>
             <class name="testcases.TC_06_ExtractBikeNames">
             </class>

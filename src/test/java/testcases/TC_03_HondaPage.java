@@ -10,15 +10,15 @@ import org.zigWheelsAutomation.utilities.PropertyReader;
 
 import java.io.IOException;
 
-public class TC_03_HondaFilter extends BaseTest {
+public class TC_03_HondaPage extends BaseTest {
 
-    private static final Logger log = LoggerFactory.getLogger(TC_03_HondaFilter.class);
+    private static final Logger log = LoggerFactory.getLogger(TC_03_HondaPage.class);
     UpcomingHondaBikesPage upcomingHondaBikesPage;
     PropertyReader propertyReader;
     SoftAssert softAssert;
 
     @Test
-    public void testHondaFilter() throws IOException {
+    public void testHondaPage() throws IOException {
         propertyReader = new PropertyReader();
         upcomingHondaBikesPage = new UpcomingHondaBikesPage(driver);
         softAssert = new SoftAssert();
