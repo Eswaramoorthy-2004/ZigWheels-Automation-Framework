@@ -60,7 +60,9 @@ public class PropertyReader {
                 prop.getProperty("brandAndModelStatus")
         );
     }
-
+    public String getHondaBikeTitle(){
+        return prop.getProperty("hondaBikeTitle");
+    }
     public Double getThreshold(){
         return Double.parseDouble(prop.getProperty("threshold"));
     }
