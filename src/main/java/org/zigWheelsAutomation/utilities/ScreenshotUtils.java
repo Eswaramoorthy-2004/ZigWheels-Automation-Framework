@@ -19,7 +19,5 @@ public class ScreenshotUtils {
         File source = ss.getScreenshotAs(OutputType.FILE);
         File destination = new File("reports/Screenshots/" + fileName + ".png");
         FileUtils.copyFile(source,destination);
-
-
     }
 }

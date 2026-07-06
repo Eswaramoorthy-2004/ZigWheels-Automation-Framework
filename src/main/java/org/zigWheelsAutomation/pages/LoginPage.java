@@ -1,6 +1,5 @@
 package org.zigWheelsAutomation.pages;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.zigWheelsAutomation.utilities.JavaScriptUtil;
 import org.zigWheelsAutomation.utilities.WaitUtil;
-
 import javax.swing.*;
 import java.time.Duration;
 import java.util.Set;
