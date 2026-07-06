@@ -2,6 +2,43 @@
 2026-07-06 10:50:43 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Succesfully
 2026-07-06 10:51:00 INFO  testcases.TC_07_ExtractBikePrices - Bike price filter is working
 2026-07-06 10:51:17 INFO  testcases.TC_08_FilterBikesBelow5Lakh - Below 5 lakh filter is working
+2026-07-06 14:51:47 INFO  testcases.TC_01_LaunchApp - Application launched successfully
+2026-07-06 14:51:58 INFO  testcases.TC_02_NavigateToUpcomingBikes - Navigated to the upcoming page successfully
+2026-07-06 14:52:10 INFO  testcases.TC_03_HondaPage - Honda filter applied successfully
+2026-07-06 14:52:23 INFO  testcases.TC_04_HondaFilter - Honda filter validated successfully
+2026-07-06 14:52:42 INFO  testcases.TC_07_ExtractBikePrices - Bike price filter is working
+2026-07-06 14:52:55 INFO  testcases.TC_08_FilterBikesBelow5Lakh - Below 5 lakh filter is working
+2026-07-06 14:53:08 INFO  testcases.TC_09_VerifyExpectedLaunchDates - Expected Launch Dates Verified Successfully
+2026-07-06 14:53:20 INFO  testcases.TC_11_NavigateUsedcars - URL: https://www.zigwheels.com/used-car
+2026-07-06 14:53:20 INFO  testcases.TC_11_NavigateUsedcars - Title: Used Cars for Sale, Buy Second Hand Cars in India @ Zigwheels
+2026-07-06 14:53:32 INFO  testcases.TC_12_SelectLocation - Chennai location selected successfully
+2026-07-06 14:53:45 INFO  testcases.TC_13_ExtractPopularCarModels - Popular car models extracted successfully
+2026-07-06 14:54:08 INFO  testcases.TC_16_ValidateLoginOptions - Login with Google, Facebook, Apple are available
+2026-07-06 14:54:27 INFO  testcases.TC_18_InvalidPhoneNumber - Invalid phone number
+2026-07-06 14:54:40 INFO  testcases.TC_19_EmptyEmail - Empty email login not successful
+2026-07-06 14:55:05 INFO  testcases.TC_20_ValidEmail - The valid email works
+2026-07-06 14:56:54 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Succesfully
+2026-07-06 14:59:23 INFO  testcases.TC_14_ValidatePopularCarModels - Selected City : Chennai
+2026-07-06 14:59:23 INFO  testcases.TC_14_ValidatePopularCarModels - Total Models Available : 13
+2026-07-06 15:00:17 INFO  testcases.TC_01_LaunchApp - Application launched successfully
+2026-07-06 15:00:28 INFO  testcases.TC_02_NavigateToUpcomingBikes - Navigated to the upcoming page successfully
+2026-07-06 15:00:40 INFO  testcases.TC_03_HondaPage - Honda filter applied successfully
+2026-07-06 15:00:53 INFO  testcases.TC_04_HondaFilter - Honda filter validated successfully
+2026-07-06 15:01:06 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Succesfully
+2026-07-06 15:01:17 INFO  testcases.TC_07_ExtractBikePrices - Bike price filter is working
+2026-07-06 15:01:30 INFO  testcases.TC_08_FilterBikesBelow5Lakh - Below 5 lakh filter is working
+2026-07-06 15:01:43 INFO  testcases.TC_09_VerifyExpectedLaunchDates - Expected Launch Dates Verified Successfully
+2026-07-06 15:01:55 INFO  testcases.TC_11_NavigateUsedcars - URL: https://www.zigwheels.com/used-car
+2026-07-06 15:01:55 INFO  testcases.TC_11_NavigateUsedcars - Title: Used Cars for Sale, Buy Second Hand Cars in India @ Zigwheels
+2026-07-06 15:02:05 INFO  testcases.TC_12_SelectLocation - Chennai location selected successfully
+2026-07-06 15:02:16 INFO  testcases.TC_13_ExtractPopularCarModels - Popular car models extracted successfully
+2026-07-06 15:02:28 INFO  testcases.TC_14_ValidatePopularCarModels - Selected City : Chennai
+2026-07-06 15:02:28 INFO  testcases.TC_14_ValidatePopularCarModels - Total Models Available : 13
+2026-07-06 15:02:36 INFO  testcases.TC_16_ValidateLoginOptions - Login with Google, Facebook, Apple are available
+2026-07-06 15:02:49 INFO  testcases.TC_17_InvalidEmail - The email is invalid
+2026-07-06 15:03:01 INFO  testcases.TC_18_InvalidPhoneNumber - Invalid phone number
+2026-07-06 15:03:14 INFO  testcases.TC_19_EmptyEmail - Empty email login not successful
+2026-07-06 15:03:28 INFO  testcases.TC_20_ValidEmail - The valid email works
 2026-07-06 15:00:22 INFO  testcases.TC_16_ValidateLoginOptions - Login with Google, Facebook, Apple are available
 2026-07-06 15:00:22 INFO  testcases.TC_16_ValidateLoginOptions - Screenshot captured successfully: LoginOption.png
 2026-07-06 15:00:42 INFO  testcases.TC_17_InvalidEmail - Invalid Email is not accepted
