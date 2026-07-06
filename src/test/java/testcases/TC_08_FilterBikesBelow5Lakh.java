@@ -1,6 +1,8 @@
 package testcases;
 
 import basetest.BaseTest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -12,6 +14,7 @@ import java.util.Map;
 
 public class TC_08_FilterBikesBelow5Lakh extends BaseTest {
 
+    private static final Logger log = LoggerFactory.getLogger(TC_08_FilterBikesBelow5Lakh.class);
     UpcomingBikesPage upcomingBikesPage;
 
     @Test
@@ -42,6 +45,7 @@ public class TC_08_FilterBikesBelow5Lakh extends BaseTest {
         softAssert.assertEquals(bikesBelowThreshold.size(), belowThresholdPrices.size(),
                 "Mismatch between filtered bike-price map and price list");
         softAssert.assertAll();
+        log.info("Below 5 lakh filter is working");
     }
 
 }

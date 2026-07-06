@@ -4,10 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.*;
 
 public class UpcomingBikesPage extends  UpcomingHondaBikesPage{
 
@@ -16,6 +17,11 @@ public class UpcomingBikesPage extends  UpcomingHondaBikesPage{
 
     @FindBy(xpath = "//div[contains(@class,'b fnt')]")
     private List<WebElement> bikePriceElements;
+
+
+    @FindBy(xpath = "//div[contains(@class,'clr-try') and contains(text(),'Expected Launch')]")
+    private List<WebElement> expectedLaunchElements;
+
 
     public UpcomingBikesPage(WebDriver driver) {
         super(driver);
@@ -90,5 +96,48 @@ public class UpcomingBikesPage extends  UpcomingHondaBikesPage{
             }
         }
         return result;
+    }
+
+    public List<String> getExpectedLaunchDates() {
+        List<String> dates = new ArrayList<>();
+        for (WebElement ele : expectedLaunchElements) {
+            String text = ele.getText().trim();
+            if (!text.isEmpty()) {
+                dates.add(text);
+            }
+        }
+        return dates;
+    }
+
+    public List<String> getLaunchDatesOnly() {
+        List<String> dates = new ArrayList<>();
+        for (String fullText : getExpectedLaunchDates()) {
+            if (fullText.contains(":")) {
+                dates.add(fullText.split(":", 2)[1].trim());
+            }
+        }
+        return dates;
+    }
+
+    public Map<String, String> getBikesWithLaunchDates() {
+        Map<String, String> result = new LinkedHashMap<>();
+        List<String> names = getBikeNames();
+        List<String> dates = getExpectedLaunchDates();
+
+        int size = Math.min(names.size(), dates.size());
+        for (int i = 0; i < size; i++) {
+            result.put(names.get(i), dates.get(i));
+        }
+        return result;
+    }
+
+    public LocalDate parseLaunchDate(String dateText) {
+        try {
+            String cleaned = dateText.replaceAll("(?i)expected launch\\s*:\\s*", "").trim();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, yyyy", Locale.ENGLISH);
+            return LocalDate.parse(cleaned, formatter);
+        } catch (DateTimeParseException e) {
+            return null;
+        }
     }
 }
