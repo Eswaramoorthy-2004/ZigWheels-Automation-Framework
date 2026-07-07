@@ -22,7 +22,7 @@ public class PopularModelsPage extends UsedCarsPage {
     WebElement cityInput;
 
     @FindBy(xpath = "//h1[@id='usedcarttlID']")
-    WebElement usedCarsHeader;
+    public WebElement usedCarsHeader;
 
     @FindBy(xpath = "//span[contains(@class,'zw-sr-frstLevActive')]")
     WebElement brandAndModelExpandedIcon;

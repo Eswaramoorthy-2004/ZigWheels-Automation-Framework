@@ -57,3 +57,15 @@
 2026-07-06 15:23:09 INFO  testcases.TC_05_ValidateCarCard - Bike Images are Displayed
 2026-07-06 15:23:09 INFO  testcases.TC_05_ValidateCarCard - Bike Names are Displayed
 2026-07-06 15:23:10 INFO  testcases.TC_05_ValidateCarCard - Bike Price are Displayed
+2026-07-07 09:50:47 INFO  testcases.TC_14_ValidatePopularCarModels - Selected City : Chennai
+2026-07-07 09:50:47 INFO  testcases.TC_14_ValidatePopularCarModels - Total Models Available : 13
+2026-07-07 09:51:12 INFO  testcases.TC_14_ValidatePopularCarModels - Selected City : Chennai
+2026-07-07 09:51:12 INFO  testcases.TC_14_ValidatePopularCarModels - Total Models Available : 13
+2026-07-07 09:53:23 INFO  testcases.TC_14_ValidatePopularCarModels - Selected City : Chennai
+2026-07-07 09:53:23 INFO  testcases.TC_14_ValidatePopularCarModels - Total Models Available : 13
+2026-07-07 10:22:09 INFO  testcases.TC_14_ValidatePopularCarModels - Selected City : Chennai
+2026-07-07 10:22:09 INFO  testcases.TC_14_ValidatePopularCarModels - Total Models Available : 13
+2026-07-07 10:28:19 INFO  testcases.TC_14_ValidatePopularCarModels - Selected City : Chennai
+2026-07-07 10:28:19 INFO  testcases.TC_14_ValidatePopularCarModels - Total Models Available : 13
+2026-07-07 10:28:57 INFO  testcases.TC_14_ValidatePopularCarModels - Selected City : Chennai
+2026-07-07 10:28:57 INFO  testcases.TC_14_ValidatePopularCarModels - Total Models Available : 13
