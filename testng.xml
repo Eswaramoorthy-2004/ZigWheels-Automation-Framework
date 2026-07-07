@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Zig Wheel Automation">
+
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+
     <test verbose="2" preserve-order="true"
           name="C:/Users/2497720/IdeaProjects/ZigWheels-Automation-Framework/src/test/java/testcases/TC_01_InvalidEmail.java">
         <classes>
@@ -22,6 +27,8 @@
             </class>
             <class name="testcases.TC_09_VerifyExpectedLaunchDates">
             </class>
+            <class name="testcases.TC_10_StoreBikeDetails">
+            </class>
             <class name="testcases.TC_11_NavigateUsedcars">
             </class>
             <class name="testcases.TC_12_SelectLocation">
@@ -29,6 +36,8 @@
             <class name="testcases.TC_13_ExtractPopularCarModels">
             </class>
             <class name="testcases.TC_14_ValidatePopularCarModels">
+            </class>
+            <class name="testcases.TC_15_ValidatePopularModelsPrice">
             </class>
             <class name="testcases.TC_16_ValidateLoginOptions">
             </class>
