@@ -14,7 +14,6 @@ import java.io.IOException;
 
 public class TC_04_HondaFilter extends BaseTest {
 
-
     private static final Logger log = LogManager.getLogger(TC_04_HondaFilter.class);
     UpcomingHondaBikesPage upcomingHondaBikesPage;
     SoftAssert softAssert;
@@ -37,7 +36,7 @@ public class TC_04_HondaFilter extends BaseTest {
                 element.getText(),ExpectedText
         );
         softAssert.assertTrue(
-                upcomingHondaBikesPage.isBikeImageDisplayed(),"Bike images are displayed"
+                upcomingHondaBikesPage.checkHondaBikesAreDisplayed(),"Honda bikes are displayed"
         );
         log.info("Honda filter validated successfully");
     }
