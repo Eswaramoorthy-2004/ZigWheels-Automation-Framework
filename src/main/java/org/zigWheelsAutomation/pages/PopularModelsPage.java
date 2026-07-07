@@ -1,10 +1,13 @@
 package org.zigWheelsAutomation.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
 import org.zigWheelsAutomation.utilities.WaitUtil;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class PopularModelsPage extends UsedCarsPage {
@@ -22,13 +25,16 @@ public class PopularModelsPage extends UsedCarsPage {
     WebElement cityInput;
 
     @FindBy(xpath = "//h1[@id='usedcarttlID']")
-    WebElement usedCarsHeader;
+    public WebElement usedCarsHeader;
 
     @FindBy(xpath = "//span[contains(@class,'zw-sr-frstLevActive')]")
     WebElement brandAndModelExpandedIcon;
 
     @FindBy(xpath = "//div[contains(text(),'Popular Models')]")
     WebElement popularModelsHeader;
+
+    @FindBy(xpath = "//span[contains(@class,'zw-cmn-price')]")
+    public List<WebElement> carPrices;
 
     public void selectCity(String city) {
         cityInput.clear();
@@ -74,4 +80,22 @@ public class PopularModelsPage extends UsedCarsPage {
     public boolean isBrandAndModelExpanded() {
         return brandAndModelExpandedIcon.isDisplayed();
     }
+
+
+    public List<String> getAllPrices() {
+        List<String> prices = new ArrayList<>();
+        List<WebElement> priceElements = driver.findElements(
+                By.xpath("//span[contains(@class,'zw-cmn-price')]"));
+        for (int i = 0; i < priceElements.size(); i++) {
+            try {
+                prices.add(priceElements.get(i).getText().trim());
+            }
+            catch (StaleElementReferenceException e) {
+                priceElements = driver.findElements(
+                        By.xpath("//span[contains(@class,'zw-cmn-price')]"));
+                prices.add(priceElements.get(i).getText().trim());
+            }}
+        return prices;
+    }
+
 }
