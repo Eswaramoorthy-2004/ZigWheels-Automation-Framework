@@ -7,8 +7,6 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.PopularModelsPage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
-import org.zigWheelsAutomation.utilities.WaitUtil;
-
 import java.io.IOException;
 import java.util.List;
 
