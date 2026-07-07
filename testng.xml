@@ -37,6 +37,8 @@
             </class>
             <class name="testcases.TC_14_ValidatePopularCarModels">
             </class>
+            <class name="testcases.TC_15_ValidatePopularModelsPrice">
+            </class>
             <class name="testcases.TC_16_ValidateLoginOptions">
             </class>
             <class name="testcases.TC_17_InvalidEmail">
