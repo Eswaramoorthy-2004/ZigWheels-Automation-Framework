@@ -80,6 +80,14 @@ public class UpcomingHondaBikesPage extends HomePage{
         return true;
     }
 
+    public boolean checkHondaBikesAreDisplayed(){
+        boolean flag = false;
+        for (WebElement ele : getBikeNameElements()) {
+            flag = ele.getText().contains("Honda");
+        }
+        return flag;
+    }
+
     public List<String> getBikeNames() {
         List<String> names = new ArrayList<>();
         for (WebElement ele : getBikeNameElements()) {

@@ -26,10 +26,12 @@ public class TC_03_HondaPage extends BaseTest {
         upcomingHondaBikesPage.clickUpcomingBikes();
         upcomingHondaBikesPage.clickHondaButton();
         String expectedUrl = propertyReader.getHondaBikesURL();
+        log.info("Checking the Honda bike page URL");
         softAssert.assertEquals(
                 driver.getCurrentUrl(),expectedUrl
         );
         String expectedTitle = propertyReader.getUpcomingHondaPageTitle();
+        log.info("Checking the Honda page page title");
         softAssert.assertEquals(
                 driver.getTitle(),expectedTitle
         );
