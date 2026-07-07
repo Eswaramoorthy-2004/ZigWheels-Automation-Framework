@@ -14,7 +14,6 @@ import java.io.IOException;
 
 public class TC_04_HondaFilter extends BaseTest {
 
-
     private static final Logger log = LogManager.getLogger(TC_04_HondaFilter.class);
     UpcomingHondaBikesPage upcomingHondaBikesPage;
     SoftAssert softAssert;
@@ -30,14 +29,15 @@ public class TC_04_HondaFilter extends BaseTest {
         upcomingHondaBikesPage.hoverNewBikes();
         upcomingHondaBikesPage.clickUpcomingBikes();
         upcomingHondaBikesPage.clickHondaButton();
-
         String ExpectedText = propertyReader.getHondaBikeTitle();
         WebElement element = waitUtil.waitForVisibility(upcomingHondaBikesPage.getHondaPageText());
+        log.info("Checking that the Honda filter is applied or not using the text of the page");
         softAssert.assertEquals(
                 element.getText(),ExpectedText
         );
+        log.info("Checking that the every bikes card name starts with Honda");
         softAssert.assertTrue(
-                upcomingHondaBikesPage.isBikeImageDisplayed(),"Bike images are displayed"
+                upcomingHondaBikesPage.checkHondaBikesAreDisplayed(),"Honda bikes are displayed"
         );
         log.info("Honda filter validated successfully");
     }
