@@ -1,247 +1,83 @@
-2026-07-07 10:56:21 INFO  org.zigWheelsAutomation.utilities.ExcelUtils - Bike details written to: test-output/BikeDetails.xlsx
-2026-07-07 10:56:21 INFO  testcases.TC_10_StoreBikeDetails - Bike Details Stored Successfully to test-output/BikeDetails.xlsx
-2026-07-07 12:58:33 INFO  testcases.TC_01_LaunchApp - Application launched successfully
-2026-07-07 12:59:49 INFO  testcases.TC_01_LaunchApp - Application launched successfully
-2026-07-07 13:00:13 INFO  testcases.TC_02_NavigateToUpcomingBikes - Navigated to upcoming bikes successfully
-2026-07-07 13:00:31 INFO  testcases.TC_03_HondaPage - Honda filter applied successfully
-2026-07-07 13:00:54 INFO  testcases.TC_04_HondaFilter - Honda filter validated successfully
-2026-07-07 13:01:09 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Successfully
-2026-07-07 13:01:38 INFO  testcases.TC_07_ExtractBikePrices - Bike price filter is working
-2026-07-07 13:02:03 INFO  testcases.TC_08_FilterBikesBelow5Lakh - Below 5 lakh filter is working
-2026-07-07 13:02:23 INFO  testcases.TC_09_VerifyExpectedLaunchDates - Expected Launch Dates Verified Successfully
-2026-07-07 13:02:42 INFO  org.zigWheelsAutomation.utilities.ExcelUtils - Bike details written to: test-output/BikeDetails.xlsx
-2026-07-07 13:02:42 INFO  testcases.TC_10_StoreBikeDetails - Bike Details Stored Successfully to test-output/BikeDetails.xlsx
-2026-07-07 13:03:00 INFO  testcases.TC_11_NavigateUsedcars - URL: https://www.zigwheels.com/used-car
-2026-07-07 13:03:00 INFO  testcases.TC_11_NavigateUsedcars - Title: Used Cars for Sale, Buy Second Hand Cars in India @ Zigwheels
-2026-07-07 13:03:22 INFO  testcases.TC_12_SelectLocation - Chennai location selected successfully
-2026-07-07 13:03:48 INFO  testcases.TC_13_ExtractPopularCarModels - Popular car models extracted successfully
-2026-07-07 13:04:26 INFO  testcases.TC_16_ValidateLoginOptions - Login with Google, Facebook, Apple are available
-2026-07-07 13:04:26 INFO  testcases.TC_16_ValidateLoginOptions - Screenshot captured successfully: LoginOption.png
-2026-07-07 13:04:59 INFO  testcases.TC_17_InvalidEmail - Invalid Email is not accepted
-2026-07-07 13:04:59 INFO  testcases.TC_17_InvalidEmail - Screenshot captured successfully: InvalidEmail.png
-2026-07-07 13:05:24 INFO  testcases.TC_18_InvalidPhoneNumber - Invalid phone number
-2026-07-07 13:05:50 INFO  testcases.TC_19_EmptyEmail - Empty Email is not accepted
-2026-07-07 13:05:50 INFO  testcases.TC_19_EmptyEmail - Screenshot captured successfully: EmptyEmail.png
-2026-07-07 13:06:58 INFO  testcases.TC_20_ValidEmail - Valid Email is accepted
-2026-07-07 13:06:58 INFO  testcases.TC_20_ValidEmail - Screenshot captured successfully: ValidEmail.png
-2026-07-07 14:33:23 INFO  listeners.TestListener - Test Suite Started: C:/Users/2497720/IdeaProjects/ZigWheels-Automation-Framework/src/test/java/testcases/TC_01_InvalidEmail.java
-2026-07-07 14:33:31 INFO  listeners.TestListener - Test Started: verifyAppLaunch
-2026-07-07 14:33:31 INFO  testcases.TC_01_LaunchApp - Application launched successfully
-2026-07-07 14:33:31 INFO  listeners.TestListener - Test Passed: verifyAppLaunch
-2026-07-07 14:33:39 INFO  listeners.TestListener - Test Started: testUpcomingBikesPage
-2026-07-07 14:33:42 INFO  testcases.TC_02_NavigateToUpcomingBikes - Navigated to upcoming bikes successfully
-2026-07-07 14:33:42 INFO  listeners.TestListener - Test Passed: testUpcomingBikesPage
-2026-07-07 14:33:50 INFO  listeners.TestListener - Test Started: testHondaPage
-2026-07-07 14:33:54 INFO  testcases.TC_03_HondaPage - Honda filter applied successfully
-2026-07-07 14:33:54 INFO  listeners.TestListener - Test Passed: testHondaPage
-2026-07-07 14:34:03 INFO  listeners.TestListener - Test Started: testHondaFilter
-2026-07-07 14:34:06 INFO  testcases.TC_04_HondaFilter - Honda filter validated successfully
-2026-07-07 14:34:06 INFO  listeners.TestListener - Test Passed: testHondaFilter
-2026-07-07 14:34:15 INFO  listeners.TestListener - Test Started: testCarCard
-2026-07-07 14:34:19 INFO  testcases.TC_05_ValidateCarCard - Bike Images are Displayed
-2026-07-07 14:34:19 INFO  testcases.TC_05_ValidateCarCard - Bike Names are Displayed
-2026-07-07 14:34:19 INFO  testcases.TC_05_ValidateCarCard - Bike Price are Displayed
-2026-07-07 14:34:19 INFO  listeners.TestListener - Test Passed: testCarCard
-2026-07-07 14:34:28 INFO  listeners.TestListener - Test Started: testBikeName
-2026-07-07 14:34:32 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Successfully
-2026-07-07 14:34:32 INFO  listeners.TestListener - Test Passed: testBikeName
-2026-07-07 14:34:38 INFO  listeners.TestListener - Test Started: testBikePrices
-2026-07-07 14:34:44 INFO  testcases.TC_07_ExtractBikePrices - Bike price filter is working
-2026-07-07 14:34:44 INFO  listeners.TestListener - Test Passed: testBikePrices
-2026-07-07 14:34:52 INFO  listeners.TestListener - Test Started: testFilterBikesBelow5Lakh
-2026-07-07 14:34:57 INFO  testcases.TC_08_FilterBikesBelow5Lakh - Below 5 lakh filter is working
-2026-07-07 14:34:57 INFO  listeners.TestListener - Test Passed: testFilterBikesBelow5Lakh
-2026-07-07 14:35:06 INFO  listeners.TestListener - Test Started: testExpectedLaunchDates
-2026-07-07 14:35:09 INFO  testcases.TC_09_VerifyExpectedLaunchDates - Expected Launch Dates Verified Successfully
-2026-07-07 14:35:09 INFO  listeners.TestListener - Test Passed: testExpectedLaunchDates
-2026-07-07 14:35:18 INFO  listeners.TestListener - Test Started: testStoreBikeDetails
-2026-07-07 14:35:24 INFO  org.zigWheelsAutomation.utilities.ExcelUtils - Bike details written to: test-output/BikeDetails.xlsx
-2026-07-07 14:35:24 INFO  testcases.TC_10_StoreBikeDetails - Bike Details Stored Successfully to test-output/BikeDetails.xlsx
-2026-07-07 14:35:24 INFO  listeners.TestListener - Test Passed: testStoreBikeDetails
-2026-07-07 14:35:33 INFO  listeners.TestListener - Test Started: testUsedCarsSection
-2026-07-07 14:35:36 INFO  testcases.TC_11_NavigateUsedcars - URL: https://www.zigwheels.com/used-car
-2026-07-07 14:35:36 INFO  testcases.TC_11_NavigateUsedcars - Title: Used Cars for Sale, Buy Second Hand Cars in India @ Zigwheels
-2026-07-07 14:35:36 INFO  listeners.TestListener - Test Passed: testUsedCarsSection
-2026-07-07 14:35:45 INFO  listeners.TestListener - Test Started: testSelectedLocation
-2026-07-07 14:35:49 INFO  testcases.TC_12_SelectLocation - Chennai location selected successfully
-2026-07-07 14:35:49 INFO  listeners.TestListener - Test Passed: testSelectedLocation
-2026-07-07 14:35:58 INFO  listeners.TestListener - Test Started: extractPopularCarModels
-2026-07-07 14:36:01 INFO  testcases.TC_13_ExtractPopularCarModels - Popular car models extracted successfully
-2026-07-07 14:36:01 INFO  listeners.TestListener - Test Passed: extractPopularCarModels
-2026-07-07 14:36:10 INFO  listeners.TestListener - Test Started: validatePopularCarModels
-2026-07-07 14:36:14 INFO  testcases.TC_14_ValidatePopularCarModels - Selected City : Chennai
-2026-07-07 14:36:14 INFO  testcases.TC_14_ValidatePopularCarModels - Total Models Available : 13
-2026-07-07 14:36:14 INFO  listeners.TestListener - Test Passed: validatePopularCarModels
-2026-07-07 14:36:28 INFO  listeners.TestListener - Test Started: invalidEmail
-2026-07-07 14:36:29 INFO  testcases.TC_16_ValidateLoginOptions - Login with Google, Facebook, Apple are available
-2026-07-07 14:36:29 INFO  testcases.TC_16_ValidateLoginOptions - Screenshot captured successfully: LoginOption.png
-2026-07-07 14:36:29 INFO  listeners.TestListener - Test Passed: invalidEmail
-2026-07-07 14:36:37 INFO  listeners.TestListener - Test Started: invalidEmail
-2026-07-07 14:36:53 INFO  testcases.TC_17_InvalidEmail - Invalid Email is not accepted
-2026-07-07 14:36:53 INFO  testcases.TC_17_InvalidEmail - Screenshot captured successfully: InvalidEmail.png
-2026-07-07 14:36:53 INFO  listeners.TestListener - Test Passed: invalidEmail
-2026-07-07 14:37:02 INFO  listeners.TestListener - Test Started: invalidEmail
-2026-07-07 14:37:06 INFO  testcases.TC_18_InvalidPhoneNumber - Invalid phone number
-2026-07-07 14:37:06 INFO  listeners.TestListener - Test Passed: invalidEmail
-2026-07-07 14:37:14 INFO  listeners.TestListener - Test Started: invalidEmail
-2026-07-07 14:37:18 INFO  testcases.TC_19_EmptyEmail - Empty Email is not accepted
-2026-07-07 14:37:18 INFO  testcases.TC_19_EmptyEmail - Screenshot captured successfully: EmptyEmail.png
-2026-07-07 14:37:18 INFO  listeners.TestListener - Test Passed: invalidEmail
-2026-07-07 14:37:27 INFO  listeners.TestListener - Test Started: invalidEmail
-2026-07-07 14:37:32 INFO  testcases.TC_20_ValidEmail - Valid Email is accepted
-2026-07-07 14:37:32 INFO  testcases.TC_20_ValidEmail - Screenshot captured successfully: ValidEmail.png
-2026-07-07 14:37:32 INFO  listeners.TestListener - Test Passed: invalidEmail
-2026-07-07 14:37:35 INFO  listeners.TestListener - Test Suite Finished: C:/Users/2497720/IdeaProjects/ZigWheels-Automation-Framework/src/test/java/testcases/TC_01_InvalidEmail.java
-2026-07-07 14:43:41 INFO  listeners.TestListener - Test Suite Started: C:/Users/2497720/IdeaProjects/ZigWheels-Automation-Framework/src/test/java/testcases/TC_01_InvalidEmail.java
-2026-07-07 14:43:51 INFO  listeners.TestListener - Test Started: verifyAppLaunch
-2026-07-07 14:43:51 INFO  testcases.TC_01_LaunchApp - Application launched successfully
-2026-07-07 14:43:51 INFO  listeners.TestListener - Test Passed: verifyAppLaunch
-2026-07-07 14:44:00 INFO  listeners.TestListener - Test Started: testUpcomingBikesPage
-2026-07-07 14:44:02 INFO  testcases.TC_02_NavigateToUpcomingBikes - Navigated to upcoming bikes successfully
-2026-07-07 14:44:02 INFO  listeners.TestListener - Test Passed: testUpcomingBikesPage
-2026-07-07 14:44:12 INFO  listeners.TestListener - Test Started: testHondaPage
-2026-07-07 14:44:15 INFO  testcases.TC_03_HondaPage - Honda filter applied successfully
-2026-07-07 14:44:15 INFO  listeners.TestListener - Test Passed: testHondaPage
-2026-07-07 14:44:24 INFO  listeners.TestListener - Test Started: testHondaFilter
-2026-07-07 14:44:27 INFO  testcases.TC_04_HondaFilter - Honda filter validated successfully
-2026-07-07 14:44:27 INFO  listeners.TestListener - Test Passed: testHondaFilter
-2026-07-07 14:44:37 INFO  listeners.TestListener - Test Started: testCarCard
-2026-07-07 14:44:40 INFO  testcases.TC_05_ValidateCarCard - Bike Images are Displayed
-2026-07-07 14:44:40 INFO  testcases.TC_05_ValidateCarCard - Bike Names are Displayed
-2026-07-07 14:44:41 INFO  testcases.TC_05_ValidateCarCard - Bike Price are Displayed
-2026-07-07 14:44:41 INFO  listeners.TestListener - Test Passed: testCarCard
-2026-07-07 14:44:50 INFO  listeners.TestListener - Test Started: testBikeName
-2026-07-07 14:44:53 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Successfully
-2026-07-07 14:44:53 INFO  listeners.TestListener - Test Passed: testBikeName
-2026-07-07 14:45:02 INFO  listeners.TestListener - Test Started: testBikePrices
-2026-07-07 14:45:06 INFO  testcases.TC_07_ExtractBikePrices - Bike price filter is working
-2026-07-07 14:45:06 INFO  listeners.TestListener - Test Passed: testBikePrices
-2026-07-07 14:45:15 INFO  listeners.TestListener - Test Started: testFilterBikesBelow5Lakh
-2026-07-07 14:45:19 INFO  testcases.TC_08_FilterBikesBelow5Lakh - Below 5 lakh filter is working
-2026-07-07 14:45:19 INFO  listeners.TestListener - Test Passed: testFilterBikesBelow5Lakh
-2026-07-07 14:45:29 INFO  listeners.TestListener - Test Started: testExpectedLaunchDates
-2026-07-07 14:45:32 INFO  testcases.TC_09_VerifyExpectedLaunchDates - Expected Launch Dates Verified Successfully
-2026-07-07 14:45:32 INFO  listeners.TestListener - Test Passed: testExpectedLaunchDates
-2026-07-07 14:45:42 INFO  listeners.TestListener - Test Started: testStoreBikeDetails
-2026-07-07 14:45:49 INFO  org.zigWheelsAutomation.utilities.ExcelUtils - Bike details written to: test-output/BikeDetails.xlsx
-2026-07-07 14:45:49 INFO  testcases.TC_10_StoreBikeDetails - Bike Details Stored Successfully to test-output/BikeDetails.xlsx
-2026-07-07 14:45:49 INFO  listeners.TestListener - Test Passed: testStoreBikeDetails
-2026-07-07 14:45:59 INFO  listeners.TestListener - Test Started: testUsedCarsSection
-2026-07-07 14:46:02 INFO  testcases.TC_11_NavigateUsedcars - URL: https://www.zigwheels.com/used-car
-2026-07-07 14:46:02 INFO  testcases.TC_11_NavigateUsedcars - Title: Used Cars for Sale, Buy Second Hand Cars in India @ Zigwheels
-2026-07-07 14:46:02 INFO  listeners.TestListener - Test Passed: testUsedCarsSection
-2026-07-07 14:46:11 INFO  listeners.TestListener - Test Started: testSelectedLocation
-2026-07-07 14:46:14 INFO  testcases.TC_12_SelectLocation - Chennai location selected successfully
-2026-07-07 14:46:14 INFO  listeners.TestListener - Test Passed: testSelectedLocation
-2026-07-07 14:46:28 INFO  listeners.TestListener - Test Started: extractPopularCarModels
-2026-07-07 14:46:59 ERROR listeners.TestListener - Test Failed: extractPopularCarModels
-org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 30.000
-  (Session info: chrome=149.0.7827.103)
-Build info: version: '4.45.0', revision: 'cd6a3cd cd6a3cdfca6970f62e5bc8344109d0fe0e2af05e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [198110366dfffbdaf5bc23360e82f021, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.14BE27B75B736FAA773D973C62698942.d.3F5895ABD192DBC555D982A0A8A51ECB.e.173}], script=arguments[0].click();}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2497805\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62889}, goog:processID: 23556, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62889/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 198110366dfffbdaf5bc23360e82f021
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.45.0.jar:?]
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.45.0.jar:?]
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.45.0.jar:?]
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:196) ~[selenium-remote-driver-4.45.0.jar:?]
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.45.0.jar:?]
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.45.0.jar:?]
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:575) ~[selenium-remote-driver-4.45.0.jar:?]
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:504) ~[selenium-remote-driver-4.45.0.jar:?]
-	at org.zigWheelsAutomation.utilities.JavaScriptUtil.clickElement(JavaScriptUtil.java:18) ~[classes/:?]
-	at org.zigWheelsAutomation.pages.UsedCarsPage.clickUsedCars(UsedCarsPage.java:31) ~[classes/:?]
-	at testcases.TC_13_ExtractPopularCarModels.extractPopularCarModels(TC_13_ExtractPopularCarModels.java:29) ~[test-classes/:?]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
-	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
-	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
-	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
-	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
-2026-07-07 14:47:06 INFO  listeners.TestListener - Test Started: validatePopularCarModels
-2026-07-07 14:47:36 ERROR listeners.TestListener - Test Failed: validatePopularCarModels
-org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 30.000
-  (Session info: chrome=149.0.7827.103)
-Build info: version: '4.45.0', revision: 'cd6a3cd cd6a3cdfca6970f62e5bc8344109d0fe0e2af05e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c505b96ac15b93a0d0de812b4dbb5f54, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.83BC4685450D91ED5426D7EEA5D93BE9.d.FB73A0587B8B989AB2AECA5D1B72130C.e.162}], script=arguments[0].click();}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2497805\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51238}, goog:processID: 17860, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51238/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c505b96ac15b93a0d0de812b4dbb5f54
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.45.0.jar:?]
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143) ~[selenium-remote-driver-4.45.0.jar:?]
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.45.0.jar:?]
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:196) ~[selenium-remote-driver-4.45.0.jar:?]
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217) ~[selenium-remote-driver-4.45.0.jar:?]
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.45.0.jar:?]
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:575) ~[selenium-remote-driver-4.45.0.jar:?]
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:504) ~[selenium-remote-driver-4.45.0.jar:?]
-	at org.zigWheelsAutomation.utilities.JavaScriptUtil.clickElement(JavaScriptUtil.java:18) ~[classes/:?]
-	at org.zigWheelsAutomation.pages.UsedCarsPage.clickUsedCars(UsedCarsPage.java:31) ~[classes/:?]
-	at testcases.TC_14_ValidatePopularCarModels.validatePopularCarModels(TC_14_ValidatePopularCarModels.java:26) ~[test-classes/:?]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.12.0.jar:7.12.0]
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697) ~[testng-7.12.0.jar:7.12.0]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.12.0.jar:7.12.0]
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.12.0.jar:7.12.0]
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005) ~[testng-7.12.0.jar:7.12.0]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.12.0.jar:7.12.0]
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.12.0.jar:7.12.0]
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.12.0.jar:7.12.0]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
-	at org.testng.TestRunner.privateRun(TestRunner.java:744) [testng-7.12.0.jar:7.12.0]
-	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.12.0.jar:7.12.0]
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.12.0.jar:7.12.0]
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.12.0.jar:7.12.0]
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.12.0.jar:7.12.0]
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.12.0.jar:7.12.0]
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.12.0.jar:7.12.0]
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.12.0.jar:7.12.0]
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.12.0.jar:7.12.0]
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.12.0.jar:7.12.0]
-	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.12.0.jar:7.12.0]
-	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.12.0.jar:7.12.0]
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
-2026-07-07 14:47:45 INFO  listeners.TestListener - Test Started: invalidEmail
-2026-07-07 14:47:46 INFO  testcases.TC_16_ValidateLoginOptions - Login with Google, Facebook, Apple are available
-2026-07-07 14:47:46 INFO  testcases.TC_16_ValidateLoginOptions - Screenshot captured successfully: LoginOption.png
-2026-07-07 14:47:46 INFO  listeners.TestListener - Test Passed: invalidEmail
-2026-07-07 14:47:54 INFO  listeners.TestListener - Test Started: invalidEmail
-2026-07-07 14:47:58 INFO  testcases.TC_17_InvalidEmail - Invalid Email is not accepted
-2026-07-07 14:47:58 INFO  testcases.TC_17_InvalidEmail - Screenshot captured successfully: InvalidEmail.png
-2026-07-07 14:47:58 INFO  listeners.TestListener - Test Passed: invalidEmail
-2026-07-07 14:48:07 INFO  listeners.TestListener - Test Started: invalidEmail
-2026-07-07 14:48:11 INFO  testcases.TC_18_InvalidPhoneNumber - Invalid phone number
-2026-07-07 14:48:11 INFO  listeners.TestListener - Test Passed: invalidEmail
-2026-07-07 14:48:18 INFO  listeners.TestListener - Test Started: invalidEmail
-2026-07-07 14:48:25 INFO  testcases.TC_19_EmptyEmail - Empty Email is not accepted
-2026-07-07 14:48:25 INFO  testcases.TC_19_EmptyEmail - Screenshot captured successfully: EmptyEmail.png
-2026-07-07 14:48:25 INFO  listeners.TestListener - Test Passed: invalidEmail
-2026-07-07 14:48:35 INFO  listeners.TestListener - Test Started: invalidEmail
-2026-07-07 14:48:41 INFO  testcases.TC_20_ValidEmail - Valid Email is accepted
-2026-07-07 14:48:41 INFO  testcases.TC_20_ValidEmail - Screenshot captured successfully: ValidEmail.png
-2026-07-07 14:48:41 INFO  listeners.TestListener - Test Passed: invalidEmail
-2026-07-07 14:48:45 INFO  listeners.TestListener - Test Suite Finished: C:/Users/2497720/IdeaProjects/ZigWheels-Automation-Framework/src/test/java/testcases/TC_01_InvalidEmail.java
+2026-07-06 10:48:05 INFO  testcases.TC_09_VerifyExpectedLaunchDates - Expected Launch Dates Verified Successfully
+2026-07-06 10:50:43 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Succesfully
+2026-07-06 10:51:00 INFO  testcases.TC_07_ExtractBikePrices - Bike price filter is working
+2026-07-06 10:51:17 INFO  testcases.TC_08_FilterBikesBelow5Lakh - Below 5 lakh filter is working
+2026-07-06 14:51:47 INFO  testcases.TC_01_LaunchApp - Application launched successfully
+2026-07-06 14:51:58 INFO  testcases.TC_02_NavigateToUpcomingBikes - Navigated to the upcoming page successfully
+2026-07-06 14:52:10 INFO  testcases.TC_03_HondaPage - Honda filter applied successfully
+2026-07-06 14:52:23 INFO  testcases.TC_04_HondaFilter - Honda filter validated successfully
+2026-07-06 14:52:42 INFO  testcases.TC_07_ExtractBikePrices - Bike price filter is working
+2026-07-06 14:52:55 INFO  testcases.TC_08_FilterBikesBelow5Lakh - Below 5 lakh filter is working
+2026-07-06 14:53:08 INFO  testcases.TC_09_VerifyExpectedLaunchDates - Expected Launch Dates Verified Successfully
+2026-07-06 14:53:20 INFO  testcases.TC_11_NavigateUsedcars - URL: https://www.zigwheels.com/used-car
+2026-07-06 14:53:20 INFO  testcases.TC_11_NavigateUsedcars - Title: Used Cars for Sale, Buy Second Hand Cars in India @ Zigwheels
+2026-07-06 14:53:32 INFO  testcases.TC_12_SelectLocation - Chennai location selected successfully
+2026-07-06 14:53:45 INFO  testcases.TC_13_ExtractPopularCarModels - Popular car models extracted successfully
+2026-07-06 14:54:08 INFO  testcases.TC_16_ValidateLoginOptions - Login with Google, Facebook, Apple are available
+2026-07-06 14:54:27 INFO  testcases.TC_18_InvalidPhoneNumber - Invalid phone number
+2026-07-06 14:54:40 INFO  testcases.TC_19_EmptyEmail - Empty email login not successful
+2026-07-06 14:55:05 INFO  testcases.TC_20_ValidEmail - The valid email works
+2026-07-06 14:56:54 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Succesfully
+2026-07-06 14:59:23 INFO  testcases.TC_14_ValidatePopularCarModels - Selected City : Chennai
+2026-07-06 14:59:23 INFO  testcases.TC_14_ValidatePopularCarModels - Total Models Available : 13
+2026-07-06 15:00:17 INFO  testcases.TC_01_LaunchApp - Application launched successfully
+2026-07-06 15:00:28 INFO  testcases.TC_02_NavigateToUpcomingBikes - Navigated to the upcoming page successfully
+2026-07-06 15:00:40 INFO  testcases.TC_03_HondaPage - Honda filter applied successfully
+2026-07-06 15:00:53 INFO  testcases.TC_04_HondaFilter - Honda filter validated successfully
+2026-07-06 15:01:06 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Succesfully
+2026-07-06 15:01:17 INFO  testcases.TC_07_ExtractBikePrices - Bike price filter is working
+2026-07-06 15:01:30 INFO  testcases.TC_08_FilterBikesBelow5Lakh - Below 5 lakh filter is working
+2026-07-06 15:01:43 INFO  testcases.TC_09_VerifyExpectedLaunchDates - Expected Launch Dates Verified Successfully
+2026-07-06 15:01:55 INFO  testcases.TC_11_NavigateUsedcars - URL: https://www.zigwheels.com/used-car
+2026-07-06 15:01:55 INFO  testcases.TC_11_NavigateUsedcars - Title: Used Cars for Sale, Buy Second Hand Cars in India @ Zigwheels
+2026-07-06 15:02:05 INFO  testcases.TC_12_SelectLocation - Chennai location selected successfully
+2026-07-06 15:02:16 INFO  testcases.TC_13_ExtractPopularCarModels - Popular car models extracted successfully
+2026-07-06 15:02:28 INFO  testcases.TC_14_ValidatePopularCarModels - Selected City : Chennai
+2026-07-06 15:02:28 INFO  testcases.TC_14_ValidatePopularCarModels - Total Models Available : 13
+2026-07-06 15:02:36 INFO  testcases.TC_16_ValidateLoginOptions - Login with Google, Facebook, Apple are available
+2026-07-06 15:02:49 INFO  testcases.TC_17_InvalidEmail - The email is invalid
+2026-07-06 15:03:01 INFO  testcases.TC_18_InvalidPhoneNumber - Invalid phone number
+2026-07-06 15:03:14 INFO  testcases.TC_19_EmptyEmail - Empty email login not successful
+2026-07-06 15:03:28 INFO  testcases.TC_20_ValidEmail - The valid email works
+2026-07-06 15:00:22 INFO  testcases.TC_16_ValidateLoginOptions - Login with Google, Facebook, Apple are available
+2026-07-06 15:00:22 INFO  testcases.TC_16_ValidateLoginOptions - Screenshot captured successfully: LoginOption.png
+2026-07-06 15:00:42 INFO  testcases.TC_17_InvalidEmail - Invalid Email is not accepted
+2026-07-06 15:00:42 INFO  testcases.TC_17_InvalidEmail - Screenshot captured successfully: InvalidEmail.png
+2026-07-06 15:00:59 INFO  testcases.TC_18_InvalidPhoneNumber - Invalid phone number is not accepted
+2026-07-06 15:00:59 INFO  testcases.TC_18_InvalidPhoneNumber - Screenshot captured successfully: InvalidPhoneNumber.png
+2026-07-06 15:01:47 INFO  testcases.TC_19_EmptyEmail - Empty Email is not accepted
+2026-07-06 15:01:47 INFO  testcases.TC_19_EmptyEmail - Screenshot captured successfully: EmptyEmail.png
+2026-07-06 15:02:09 INFO  testcases.TC_20_ValidEmail - Valid Email is accepted
+2026-07-06 15:02:09 INFO  testcases.TC_20_ValidEmail - Screenshot captured successfully: ValidEmail.png
+2026-07-06 14:58:33 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Successfully
+2026-07-06 15:05:45 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Successfully
+2026-07-06 15:06:59 INFO  testcases.TC_07_ExtractBikePrices - Bike price filter is working
+2026-07-06 15:09:01 INFO  testcases.TC_08_FilterBikesBelow5Lakh - Below 5 lakh filter is working
+2026-07-06 15:10:17 INFO  testcases.TC_09_VerifyExpectedLaunchDates - Expected Launch Dates Verified Successfully
+2026-07-06 15:23:09 INFO  testcases.TC_05_ValidateCarCard - Bike Images are Displayed
+2026-07-06 15:23:09 INFO  testcases.TC_05_ValidateCarCard - Bike Names are Displayed
+2026-07-06 15:23:10 INFO  testcases.TC_05_ValidateCarCard - Bike Price are Displayed
+2026-07-06 15:50:48 INFO  testcases.TC_01_LaunchApp - Application launched successfully
+2026-07-06 15:51:01 INFO  testcases.TC_02_NavigateToUpcomingBikes - Navigated to upcoming bikes successfully
+2026-07-06 15:51:19 INFO  testcases.TC_03_HondaPage - Honda filter applied successfully
+2026-07-06 15:51:53 INFO  testcases.TC_04_HondaFilter - Honda filter validated successfully
+2026-07-06 15:52:07 INFO  testcases.TC_05_ValidateCarCard - Bike Images are Displayed
+2026-07-06 15:52:07 INFO  testcases.TC_05_ValidateCarCard - Bike Names are Displayed
+2026-07-06 15:52:07 INFO  testcases.TC_05_ValidateCarCard - Bike Price are Displayed
+2026-07-06 15:52:21 INFO  testcases.TC_06_ExtractBikeNames - Bike Names Extracted Successfully
+2026-07-06 15:52:37 INFO  testcases.TC_07_ExtractBikePrices - Bike price filter is working
+2026-07-06 15:52:51 INFO  testcases.TC_08_FilterBikesBelow5Lakh - Below 5 lakh filter is working
+2026-07-06 15:53:04 INFO  testcases.TC_09_VerifyExpectedLaunchDates - Expected Launch Dates Verified Successfully
+2026-07-06 15:53:27 INFO  testcases.TC_11_NavigateUsedcars - URL: https://www.zigwheels.com/used-car
+2026-07-06 15:53:27 INFO  testcases.TC_11_NavigateUsedcars - Title: Used Cars for Sale, Buy Second Hand Cars in India @ Zigwheels
+2026-07-06 15:53:43 INFO  testcases.TC_12_SelectLocation - Chennai location selected successfully
+2026-07-06 15:53:58 INFO  testcases.TC_13_ExtractPopularCarModels - Popular car models extracted successfully
+2026-07-06 15:54:23 INFO  testcases.TC_16_ValidateLoginOptions - Login with Google, Facebook, Apple are available
+2026-07-06 15:54:23 INFO  testcases.TC_16_ValidateLoginOptions - Screenshot captured successfully: LoginOption.png
+2026-07-06 15:54:36 INFO  testcases.TC_17_InvalidEmail - Invalid Email is not accepted
+2026-07-06 15:54:36 INFO  testcases.TC_17_InvalidEmail - Screenshot captured successfully: InvalidEmail.png
+2026-07-06 15:54:52 INFO  testcases.TC_18_InvalidPhoneNumber - Invalid phone number
+2026-07-06 15:55:08 INFO  testcases.TC_19_EmptyEmail - Empty Email is not accepted
+2026-07-06 15:55:08 INFO  testcases.TC_19_EmptyEmail - Screenshot captured successfully: EmptyEmail.png
+2026-07-06 15:55:23 INFO  testcases.TC_20_ValidEmail - Valid Email is accepted
+2026-07-06 15:55:23 INFO  testcases.TC_20_ValidEmail - Screenshot captured successfully: ValidEmail.png
