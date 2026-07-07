@@ -1,28 +1,38 @@
 package testcases;
 
 import basetest.BaseTest;
-import org.testng.Assert;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
-import org.zigWheelsAutomation.pages.UpcomingBikesPage;
+import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.UpcomingHondaBikesPage;
 
-import java.time.Duration;
 import java.util.List;
 
 public class TC_06_ExtractBikeNames extends BaseTest {
-    UpcomingBikesPage upcomingBikesPage;
+
+    private static final Logger log = LogManager.getLogger(TC_06_ExtractBikeNames.class);
+    UpcomingHondaBikesPage upcomingHondaBikesPage;
+    SoftAssert softAssert;
 
     @Test
     public void testBikeName(){
-        upcomingBikesPage = new UpcomingBikesPage(driver);
-        upcomingBikesPage.hoverNewBikes();
-        upcomingBikesPage.clickUpcomingBikes();
-        upcomingBikesPage.clickHondaButton();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-        List<String> names = upcomingBikesPage.getBikeNames();
-
-        Assert.assertNotNull(names, "Bike names list should not be null");
-        Assert.assertFalse(names.isEmpty(), "Bike names list should not be empty");
-        Assert.assertTrue(names.size() > 0, "At least one bike name should be captured");
+        upcomingHondaBikesPage = new UpcomingHondaBikesPage(driver);
+        softAssert = new SoftAssert();
+        upcomingHondaBikesPage.hoverNewBikes();
+        upcomingHondaBikesPage.clickUpcomingBikes();
+        upcomingHondaBikesPage.clickHondaButton();
+        List<String> names = upcomingHondaBikesPage.getBikeNames();
+        softAssert.assertNotNull(
+                names, "Bike names list should not be null"
+        );
+        softAssert.assertFalse(
+                names.isEmpty(), "Bike names list should not be empty"
+        );
+        softAssert.assertTrue(
+                names.size() > 0, "At least one bike name should be captured"
+        );
+        softAssert.assertAll();
+        log.info("Bike Names Extracted Successfully");
     }
 }

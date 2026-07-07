@@ -1,18 +1,14 @@
 package org.zigWheelsAutomation.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
+import org.zigWheelsAutomation.utilities.WaitUtil;
 import java.util.List;
 
 public class PopularModelsPage extends UsedCarsPage {
-
+    WaitUtil waitUtil;
 
     public PopularModelsPage(WebDriver driver) {
         super(driver);
@@ -35,21 +31,12 @@ public class PopularModelsPage extends UsedCarsPage {
     WebElement popularModelsHeader;
 
     public void selectCity(String city) {
-
         cityInput.clear();
         cityInput.sendKeys(city);
-
-        String cityXpath = "//*[@id=\"popularCityList\"]/li[7]/a";
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        WebElement cityOption = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath(cityXpath)));
-
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        //js.executeScript("arguments[0].scrollIntoView(true);", cityOption);
-        js.executeScript("arguments[0].click();", cityOption);
-
+        String cityXpath = "//*[@id='popularCityList']/li[7]/a";
+        waitUtil = new WaitUtil(driver);
+        WebElement cityOption = waitUtil.waitForVisibilityOfElementLocated(By.xpath(cityXpath));
+        javaScriptUtil.clickElement(cityOption);
     }
 
     public int getModelCount() {
@@ -67,18 +54,13 @@ public class PopularModelsPage extends UsedCarsPage {
                 if (!text.isEmpty()) {
                     System.out.println(text);
                 }}
-            catch (Exception e) {
-                System.out.println("Skipped stale element at index " + i);
-            }}}
+            catch (Exception ignored) {
 
+            }
+        }
+    }
     public String getSelectedCity() {
         return cityInput.getAttribute("value");
-    }
-
-    public void clickFirstModel() {
-        if (popularModels.size() > 0) {
-            popularModels.get(0).click();
-        }
     }
 
     public boolean isPopularModelsDisplayed() {

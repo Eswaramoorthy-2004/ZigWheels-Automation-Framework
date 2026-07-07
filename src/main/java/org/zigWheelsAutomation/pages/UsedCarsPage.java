@@ -1,19 +1,19 @@
 package org.zigWheelsAutomation.pages;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
-
-import java.util.List;
+import org.zigWheelsAutomation.utilities.JavaScriptUtil;
 
 public class UsedCarsPage {
 
     public WebDriver driver;
+    JavaScriptUtil javaScriptUtil;
 
     public UsedCarsPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+        javaScriptUtil = new JavaScriptUtil(driver);
     }
 
     @FindBy(xpath = "//span[text()='MORE']")
@@ -27,10 +27,7 @@ public class UsedCarsPage {
     }
 
     public void clickUsedCars() {
-
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-
-        js.executeScript("arguments[0].scrollIntoView({block:'center'});", usedCarsOption);
-        js.executeScript("arguments[0].click();", usedCarsOption);
-
-    }}
+        javaScriptUtil.scrollIntoView(usedCarsOption);
+        javaScriptUtil.clickElement(usedCarsOption);
+    }
+}

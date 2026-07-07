@@ -1,28 +1,42 @@
 package testcases;
 
 import basetest.BaseTest;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.zigWheelsAutomation.pages.LoginPage;
+import org.zigWheelsAutomation.utilities.PropertyReader;
+import org.zigWheelsAutomation.utilities.ScreenshotUtils;
+
+import java.io.IOException;
 import java.time.Duration;
 
 public class TC_19_EmptyEmail extends BaseTest {
     LoginPage glp;
-
+    PropertyReader prop;
+    String oldWindow;
+    ScreenshotUtils ss;
+    private static final Logger log = LogManager.getLogger(TC_19_EmptyEmail.class);
     @Test
-    public void invalidEmail() throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    public void invalidEmail() throws InterruptedException, IOException {
         glp = new LoginPage(driver);
+        prop = new PropertyReader();
+        ss = new ScreenshotUtils(driver);
         glp.goLogin();
-        String oldWindow = driver.getWindowHandle();
+        oldWindow = driver.getWindowHandle();
         glp.clickGoogle();
-        wait.until(ExpectedConditions.numberOfWindowsToBe(2));
         glp.switchWindow();
         glp.enterEmailOrPhone("");
         glp.clickNext();
-        Assert.assertEquals(glp.getErrorMessage(), "Enter an email or phone number");
+        Assert.assertEquals(
+                glp.getErrorMessage(), prop.getExpectedMsgEmptyEmail()
+        );
+        ss.screenShot("EmptyEmail");
         driver.switchTo().window(oldWindow);
+        log.info("Empty Email is not accepted");
+        log.info("Screenshot captured successfully: EmptyEmail.png");
     }
 }

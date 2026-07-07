@@ -35,34 +35,40 @@ public class PropertyReader {
     public String getInValidEmail(){
         return prop.getProperty("invalidEmail");
     }
-
     public String getValidPhoneNumber(){
         return prop.getProperty("invalidPhoneNumber");
     }
+    public String getExpectedMsgInvalidEmail(){
+        return prop.getProperty("expectedMsgInvalidEmail");
+    }
+    public String getExpectedMsgInvalidPhone(){
+        return prop.getProperty("expectedMsgInvalidPhone");
+    }
+    public String getExpectedMsgEmptyEmail(){
+        return prop.getProperty("expectedMsgEmptyEmail");
+    }
 
     public String getCity() {
-
         return prop.getProperty("city");
     }
-    public String getUsedcarpageurl(){
+    public String getUsedCarPageUrl(){
         return prop.getProperty("usedcarspage.url");
     }
-
-    public String getUsedcarPageTitle() {
+    public String getUsedCarPageTitle() {
         return prop.getProperty("usedcarpagetitle");
     }
-
     public String getUsedCarsHeader() {
         return prop.getProperty("usedCarsHeader");
     }
-
     public boolean getBrandAndModelStatus() {
         return Boolean.parseBoolean(
                 prop.getProperty("brandAndModelStatus")
         );
     }
-
-
-
-
+    public String getHondaBikeTitle(){
+        return prop.getProperty("hondaBikeTitle");
+    }
+    public Double getThreshold(){
+        return Double.parseDouble(prop.getProperty("threshold"));
+    }
 }
