@@ -81,3 +81,6 @@
 2026-07-06 15:55:08 INFO  testcases.TC_19_EmptyEmail - Screenshot captured successfully: EmptyEmail.png
 2026-07-06 15:55:23 INFO  testcases.TC_20_ValidEmail - Valid Email is accepted
 2026-07-06 15:55:23 INFO  testcases.TC_20_ValidEmail - Screenshot captured successfully: ValidEmail.png
+2026-07-07 15:14:15 INFO  testcases.TC_05_ValidateCarCard - Bike Images are Displayed
+2026-07-07 15:14:15 INFO  testcases.TC_05_ValidateCarCard - Bike Names are Displayed
+2026-07-07 15:14:15 INFO  testcases.TC_05_ValidateCarCard - Bike Price are Displayed
