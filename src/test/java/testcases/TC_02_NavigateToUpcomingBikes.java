@@ -25,9 +25,11 @@ public class TC_02_NavigateToUpcomingBikes extends BaseTest {
         homePage.hoverNewBikes();
         homePage.clickUpcomingBikes();
         String expectedURL = propertyReader.getUpcomingBikesURL();
+        log.info("Checking the URL");
         softAssert.assertEquals(
                 driver.getCurrentUrl(),expectedURL
         );
+        log.info("Checking the Page title");
         String expectedTitle = propertyReader.getUpcomingBikesPageTitle();
         softAssert.assertEquals(
                 driver.getTitle(),expectedTitle
