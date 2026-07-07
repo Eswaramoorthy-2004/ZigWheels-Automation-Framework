@@ -33,8 +33,11 @@ public class TC_14_ValidatePopularCarModels extends BaseTest {
                 modelCount > 0,
                 "No popular car models are displayed"
         );
-        wait.waitForTextToBePresent(popularModelsPage.usedCarsHeader,propertyReader.getUsedCarsHeader());
         popularModelsPage.printModels();
+        wait.waitForTextToBePresentInElement(
+                popularModelsPage.usedCarsHeader,
+                propertyReader.getUsedCarsHeader()
+        );
         softAssert.assertEquals(
                 popularModelsPage.getUsedCarsHeaderText(),
                 propertyReader.getUsedCarsHeader(),
