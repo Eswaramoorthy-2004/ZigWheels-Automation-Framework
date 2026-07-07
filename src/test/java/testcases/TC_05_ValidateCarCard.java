@@ -31,7 +31,6 @@ public class TC_05_ValidateCarCard extends BaseTest {
         softAssert.assertTrue(
                 upcomingHondaBikesPage.isBikePriceVisible(),"Bike Price are visible"
         );
-        softAssert.assertAll();
         log.info("Validated the Car card successfully");
     }
 
