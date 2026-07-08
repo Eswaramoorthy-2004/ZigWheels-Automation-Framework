@@ -32,7 +32,7 @@ public class ExtentManager {
         extent = new ExtentReports();
         extent.attachReporter(spark);
         extent.setSystemInfo("Project", "ZigWheels Automation Framework");
-        extent.setSystemInfo("Tester", "Saibal Mandal");
+        extent.setSystemInfo("Tester", "QA Team");
         extent.setSystemInfo("Environment", "QA");
         extent.setSystemInfo("Browser", "Chrome");
         extent.setSystemInfo("OS", System.getProperty("os.name"));

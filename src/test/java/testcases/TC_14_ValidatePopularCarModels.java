@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.PopularModelsPage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
+import org.zigWheelsAutomation.utilities.ScreenshotUtils;
 import org.zigWheelsAutomation.utilities.WaitUtil;
 
 import java.io.IOException;
@@ -18,6 +19,7 @@ public class TC_14_ValidatePopularCarModels extends BaseTest {
     PropertyReader propertyReader;
     SoftAssert softAssert;
     WaitUtil wait;
+    ScreenshotUtils ss;
 
     @Test
     public void validatePopularCarModels() throws IOException {
@@ -25,6 +27,7 @@ public class TC_14_ValidatePopularCarModels extends BaseTest {
         propertyReader = new PropertyReader();
         softAssert = new SoftAssert();
         wait = new WaitUtil(driver);
+        ss = new ScreenshotUtils(driver);
         popularModelsPage.clickMore();
         popularModelsPage.clickUsedCars();
         popularModelsPage.selectCity(propertyReader.getCity());
@@ -46,5 +49,6 @@ public class TC_14_ValidatePopularCarModels extends BaseTest {
         softAssert.assertAll();
         log.info("Selected City : {}",popularModelsPage.getSelectedCity());
         log.info("Total Models Available : {}",modelCount);
+        ss.screenShot("PopularCarModels");
     }
 }
