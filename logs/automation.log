@@ -19,3 +19,4 @@
 2026-07-08 17:38:04 INFO  testcases.TC_15_ValidatePopularModelsPrice - Car Price : Rs. 18.50 Lakh
 2026-07-08 17:38:35 INFO  testcases.TC_14_ValidatePopularCarModels - Selected City : Chennai
 2026-07-08 17:38:35 INFO  testcases.TC_14_ValidatePopularCarModels - Total Models Available : 13
+2026-07-08 17:41:26 INFO  testcases.TC_13_ExtractPopularCarModels - Popular car models extracted successfully
