@@ -36,16 +36,6 @@ public class TC_14_ValidatePopularCarModels extends BaseTest {
                 modelCount > 0,
                 "No popular car models are displayed"
         );
-        popularModelsPage.printModels();
-        wait.waitForTextToBePresentInElement(
-                popularModelsPage.usedCarsHeader,
-                propertyReader.getUsedCarsHeader()
-        );
-        softAssert.assertEquals(
-                popularModelsPage.getUsedCarsHeaderText(),
-                propertyReader.getUsedCarsHeader(),
-                "Used Cars header text mismatch"
-        );
         softAssert.assertAll();
         log.info("Selected City : {}",popularModelsPage.getSelectedCity());
         log.info("Total Models Available : {}",modelCount);

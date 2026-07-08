@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2026-07-08 17:19:02 INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\2497741\AppData\Local\JetBrains\IdeaIC2025.2\temp-testng-customsuite.xml
 
@@ -538,3 +539,27 @@ java.lang.NullPointerException: Cannot invoke "org.zigWheelsAutomation.utilities
 
 2026-07-08 17:31:03 INFO  testcases.TC_14_ValidatePopularCarModels - Selected City : Chennai
 2026-07-08 17:31:03 INFO  testcases.TC_14_ValidatePopularCarModels - Total Models Available : 13
+=======
+2026-07-08 13:57:37 INFO  testcases.TC_05_ValidateCarCard - Bike Images are Displayed
+2026-07-08 13:57:38 INFO  testcases.TC_05_ValidateCarCard - Bike Names are Displayed
+2026-07-08 13:57:38 INFO  testcases.TC_05_ValidateCarCard - Bike Price are Displayed
+2026-07-08 17:36:40 INFO  testcases.TC_14_ValidatePopularCarModels - Selected City : Chennai
+2026-07-08 17:36:40 INFO  testcases.TC_14_ValidatePopularCarModels - Total Models Available : 13
+2026-07-08 17:37:26 INFO  testcases.TC_14_ValidatePopularCarModels - Selected City : Chennai
+2026-07-08 17:37:26 INFO  testcases.TC_14_ValidatePopularCarModels - Total Models Available : 13
+2026-07-08 17:38:04 INFO  testcases.TC_15_ValidatePopularModelsPrice - Car Price : Rs. 11.90 Lakh
+2026-07-08 17:38:04 INFO  testcases.TC_15_ValidatePopularModelsPrice - Car Price : Rs. 2.71 Lakh
+2026-07-08 17:38:04 INFO  testcases.TC_15_ValidatePopularModelsPrice - Car Price : Rs. 6.48 Lakh
+2026-07-08 17:38:04 INFO  testcases.TC_15_ValidatePopularModelsPrice - Car Price : Rs. 3.80 Lakh
+2026-07-08 17:38:04 INFO  testcases.TC_15_ValidatePopularModelsPrice - Car Price : Rs. 3.51 Lakh
+2026-07-08 17:38:04 INFO  testcases.TC_15_ValidatePopularModelsPrice - Car Price : Rs. 8.75 Lakh
+2026-07-08 17:38:04 INFO  testcases.TC_15_ValidatePopularModelsPrice - Car Price : Rs. 4.01 Lakh
+2026-07-08 17:38:04 INFO  testcases.TC_15_ValidatePopularModelsPrice - Car Price : Rs. 8.50 Lakh
+2026-07-08 17:38:04 INFO  testcases.TC_15_ValidatePopularModelsPrice - Car Price : Rs. 7.87 Lakh
+2026-07-08 17:38:04 INFO  testcases.TC_15_ValidatePopularModelsPrice - Car Price : Rs. 21.99 Lakh
+2026-07-08 17:38:04 INFO  testcases.TC_15_ValidatePopularModelsPrice - Car Price : Rs. 2.55 Lakh
+2026-07-08 17:38:04 INFO  testcases.TC_15_ValidatePopularModelsPrice - Car Price : Rs. 18.50 Lakh
+2026-07-08 17:38:35 INFO  testcases.TC_14_ValidatePopularCarModels - Selected City : Chennai
+2026-07-08 17:38:35 INFO  testcases.TC_14_ValidatePopularCarModels - Total Models Available : 13
+2026-07-08 17:41:26 INFO  testcases.TC_13_ExtractPopularCarModels - Popular car models extracted successfully
+>>>>>>> 96423e484d7423933489ed14b2507fba50c51e08
