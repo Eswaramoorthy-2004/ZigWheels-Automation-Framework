@@ -3,7 +3,6 @@ package testcases;
 import basetest.BaseTest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.PopularModelsPage;
