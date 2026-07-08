@@ -12,16 +12,13 @@ import java.util.List;
 
 public class TC_15_ValidatePopularModelsPrice extends BaseTest {
 
-    private static final Logger log =
-            LogManager.getLogger(TC_15_ValidatePopularModelsPrice.class);
-
+    private static final Logger log = LogManager.getLogger(TC_15_ValidatePopularModelsPrice.class);
     PopularModelsPage popularModelsPage;
     PropertyReader propertyReader;
     SoftAssert softAssert;
 
     @Test
     public void validatePopularModelsPrice() throws IOException {
-
         popularModelsPage = new PopularModelsPage(driver);
         propertyReader = new PropertyReader();
         softAssert = new SoftAssert();
