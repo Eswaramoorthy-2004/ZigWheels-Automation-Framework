@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.HomePage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
+import org.zigWheelsAutomation.utilities.ScreenshotUtils;
 
 import java.io.IOException;
 
@@ -16,12 +17,14 @@ public class TC_02_NavigateToUpcomingBikes extends BaseTest {
     PropertyReader propertyReader;
     HomePage homePage;
     SoftAssert softAssert;
+    ScreenshotUtils ss;
 
     @Test
     public void testUpcomingBikesPage() throws IOException {
         propertyReader = new PropertyReader();
         homePage = new HomePage(driver);
         softAssert = new SoftAssert();
+        ss = new ScreenshotUtils(driver);
         homePage.hoverNewBikes();
         homePage.clickUpcomingBikes();
         String expectedURL = propertyReader.getUpcomingBikesURL();
@@ -36,5 +39,6 @@ public class TC_02_NavigateToUpcomingBikes extends BaseTest {
         );
         softAssert.assertAll();
         log.info("Navigated to upcoming bikes successfully");
+        ss.screenShot("UpcommingBikes");
     }
 }

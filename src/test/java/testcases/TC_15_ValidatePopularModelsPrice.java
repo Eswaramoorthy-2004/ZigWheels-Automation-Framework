@@ -14,7 +14,6 @@ public class TC_15_ValidatePopularModelsPrice extends BaseTest {
 
     private static final Logger log =
             LogManager.getLogger(TC_15_ValidatePopularModelsPrice.class);
-
     PopularModelsPage popularModelsPage;
     PropertyReader propertyReader;
     SoftAssert softAssert;

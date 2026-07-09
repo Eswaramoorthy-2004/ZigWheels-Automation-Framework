@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.UpcomingHondaBikesPage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
+import org.zigWheelsAutomation.utilities.ScreenshotUtils;
 
 import java.io.IOException;
 
@@ -16,12 +17,14 @@ public class TC_03_HondaPage extends BaseTest {
     UpcomingHondaBikesPage upcomingHondaBikesPage;
     PropertyReader propertyReader;
     SoftAssert softAssert;
+    ScreenshotUtils ss;
 
     @Test
     public void testHondaPage() throws IOException {
         propertyReader = new PropertyReader();
         upcomingHondaBikesPage = new UpcomingHondaBikesPage(driver);
         softAssert = new SoftAssert();
+        ss = new ScreenshotUtils(driver);
         upcomingHondaBikesPage.hoverNewBikes();
         upcomingHondaBikesPage.clickUpcomingBikes();
         upcomingHondaBikesPage.clickHondaButton();
@@ -37,5 +40,6 @@ public class TC_03_HondaPage extends BaseTest {
         );
         softAssert.assertAll();
         log.info("Honda filter applied successfully");
+        ss.screenShot("HondaPage");
     }
 }

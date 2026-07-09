@@ -37,5 +37,4 @@ public class WaitUtil {
     public boolean waitForTextToBePresentInElement(WebElement element, String text) {
         return wait.until(ExpectedConditions.textToBePresentInElement(element, text));
     }
-
 }
