@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.zigWheelsAutomation.pages.HomePage;
 import org.zigWheelsAutomation.utilities.PropertyReader;
+import org.zigWheelsAutomation.utilities.ScreenshotUtils;
 
 import java.io.IOException;
 
@@ -16,12 +17,14 @@ public class TC_01_LaunchApp extends BaseTest {
     PropertyReader propertyReader;
     HomePage homePage;
     SoftAssert softAssert;
+    ScreenshotUtils ss;
 
     @Test
     public void verifyAppLaunch() throws IOException {
         homePage = new HomePage(driver);
         propertyReader = new PropertyReader();
         softAssert = new SoftAssert();
+        ss = new ScreenshotUtils(driver);
         String expectedTitle = propertyReader.getPageTitle();
         softAssert.assertEquals(
                 driver.getTitle(), expectedTitle
@@ -35,6 +38,7 @@ public class TC_01_LaunchApp extends BaseTest {
         );
         softAssert.assertAll();
         log.info("Application launched successfully");
+        ss.screenShot("HomePage");
     }
 
 }

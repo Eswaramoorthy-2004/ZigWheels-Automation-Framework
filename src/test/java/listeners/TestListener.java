@@ -52,11 +52,10 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onFinish(ITestContext context) {
-        extent.flush();  // ⚠️ Critical: writes the report to disk
+        extent.flush();
         log.info("Test Suite Finished: {}", context.getName());
     }
 
-    /** Utility so tests can log custom steps to the report. */
     public static ExtentTest getTest() {
         return extentTest.get();
     }

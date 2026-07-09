@@ -129,7 +129,6 @@ public class UpcomingHondaBikesPage extends HomePage{
         } catch (NumberFormatException e) {
             return -1;
         }
-        // Rs 5.0 Lakh
     }
     public List<String> getPricesBelow(double thresholdInLakh) {
         List<String> filtered = new ArrayList<>();
